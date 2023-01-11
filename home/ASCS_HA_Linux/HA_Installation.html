@@ -1,0 +1,918 @@
+<!--
+title: HA_Installation
+description: 
+published: true
+date: 2023-01-05T02:13:39.134Z
+tags: 
+editor: code
+dateCreated: 2023-01-05T02:13:36.832Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"新細明體",serif;} 
+	a:link, span.MsoHyperlink 
+	{color:#0563C1; 
+	text-decoration:underline;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.0pt 842.0pt; 
+	margin:36.0pt 36.0pt 36.0pt 36.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW link="#0563C1" vlink="#954F72" style='word-wrap:break-word; 
+	text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<div align=center> 
+	
+	<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 
+	style='border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=697 colspan=2 valign=top style='width:522.5pt;border:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><b><span 
+	lang=EN-US style='font-size:15.0pt;font-family:"Calibri",sans-serif'>HA 
+	installation</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>1</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>Insatll ASCS on hacert01</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>2</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>Install ERS on hacert02</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>3</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'>將兩台（<span 
+	lang=EN-US style='font-family:"Calibri",sans-serif'>hacert01&amp; hacert02</span>）的<span 
+	lang=EN-US style='font-family:"Calibri",sans-serif'> /usr/sap/sapservices</span>互抄</p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>4</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'>參數修改</p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>5</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'>修改三台<span 
+	lang=EN-US style='font-family:"Calibri",sans-serif'>hosts</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>6</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>Install DB on hacert03</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>7</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>Install PAS on hacert03</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>8</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>Install AAS on hacert03</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=85 valign=top style='width:63.55pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>9</span></p> 
+	</td> 
+	<td width=612 valign=top style='width:458.95pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'>修改<span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>hosts </span>啟用<span lang=EN-US 
+	style='font-family:"Calibri",sans-serif'>NTP</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	</div> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>Source 
+	</span>清單：</p> 
+	
+	<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=699 
+	style='width:524.25pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>File name</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border:solid windowtext 1.0pt; 
+	border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>Detail</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>50148617_3</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>Presentation - MaxDB Release 7.9.8.23</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>51050818_5</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>SAP Kernel 7.42 Linux on x86_64 64bit</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>51050819_1</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>NW 7.4 SR2 Installation Export</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>51050819_4</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>NW 7.4 SR2 Language 1/2</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>51050819_5</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>NW 7.4 SR2 Language 2/2</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>&nbsp;</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>SAPEXE_700-80002573.SAR</span></p> 
+	<p class=MsoNormal><span style='font-size:10.5pt;color:black'>（原本）</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Kernel Part I (753)</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Support Package SAP KERNEL 7.53 64-BIT UNICODE Linux on x86_64 
+	64bit #Database independent</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>SAPEXEDB_700-80002604.SAR</span></p> 
+	<p class=MsoNormal><span style='font-size:10.5pt;color:black'>（原本）</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Kernel Part II (753)</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Support Package SAP KERNEL 7.53 64-BIT UNICODE Linux on x86_64 
+	64bit MaxDB</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=699 colspan=2 valign=top style='width:524.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-size:10.5pt;color:black'>因</span><span 
+	lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'> SWPM </span><span style='font-size:10.5pt;color:black'>卡住故更新為下面</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>SAPEXE_500-20012215.SAR</span></p> 
+	<p class=MsoNormal><span style='font-size:10.5pt;color:black'>（更新後）</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Kernel Part I (742)</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Support Package SAP KERNEL 7.42 64-BIT UNICODE Linux on x86_64 
+	64bit #Database independent</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>SAPEXEDB_500-20012213.SAR</span></p> 
+	<p class=MsoNormal><span style='font-size:10.5pt;color:black'>（更新後）</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:white;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Kernel Part II (742)</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:black'>Support Package SAP KERNEL 7.42 64-BIT UNICODE Linux on x86_64 
+	64bit MaxDB</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>&nbsp;</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=236 valign=top style='width:176.95pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>SWPM10SP30_ 4-20009701.SAR</span></p> 
+	</td> 
+	<td width=463 valign=top style='width:347.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif; 
+	color:#333333'>SWPM 1.0 SP30 for NW higher than 7.0x</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal>參考<span lang=EN-US>PDF</span>：</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><a 
+	href="https://www.suse.com/media/white-paper/sap_netweaver_availability_cluster_740_setup_guide.pdf">https://www.suse.com/media/white-paper/sap_netweaver_availability_cluster_740_setup_guide.pdf</a></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=102 height=64 
+	src="/s2/技研/ha_/image001.png"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>1. 
+	Install ASCS on hacert01</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=498 
+	id="圖片 149" src="/s2/技研/ha_/image002.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 150" src="/s2/技研/ha_/image003.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 152" 
+	src="/s2/技研/ha_/image004.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 153" src="/s2/技研/ha_/image005.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 154" src="/s2/技研/ha_/image006.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 155" 
+	src="/s2/技研/ha_/image007.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 156" src="/s2/技研/ha_/image008.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 157" src="/s2/技研/ha_/image009.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 158" 
+	src="/s2/技研/ha_/image010.jpg"><img border=0 width=698 height=310 
+
+	id="圖片 159" src="/s2/技研/ha_/image011.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 160" src="/s2/技研/ha_/image012.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 161" 
+	src="/s2/技研/ha_/image013.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 162" src="/s2/技研/ha_/image014.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 163" src="/s2/技研/ha_/image015.jpg"><img 
+
+	border=0 width=698 height=483 id="圖片 164" 
+	src="/s2/技研/ha_/image016.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 165" src="/s2/技研/ha_/image017.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 166" src="/s2/技研/ha_/image018.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 167" 
+	src="/s2/技研/ha_/image019.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 168" src="/s2/技研/ha_/image020.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 169" src="/s2/技研/ha_/image021.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 170" 
+	src="/s2/技研/ha_/image022.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 171" src="/s2/技研/ha_/image023.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 172" src="/s2/技研/ha_/image024.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 173" 
+	src="/s2/技研/ha_/image025.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>修改<span lang=EN-US> /usr/sap/HA1/ASCS </span>目錄的權限</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 174" src="/s2/技研/ha_/image026.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>回去繼續跑</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 175" src="/s2/技研/ha_/image027.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 176" src="/s2/技研/ha_/image028.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>第一台安裝完畢</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 177" src="/s2/技研/ha_/image029.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>（這邊是因為當初在切的時候 將<span lang=EN-US>sys</span>誤打成小寫，故複製過去）</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 178" src="/s2/技研/ha_/image030.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>2. 
+	Install ERS on hacert02</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=373 
+	id="圖片 179" src="/s2/技研/ha_/image031.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 180" src="/s2/技研/ha_/image032.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 181" 
+	src="/s2/技研/ha_/image033.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 182" src="/s2/技研/ha_/image034.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 183" src="/s2/技研/ha_/image035.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 184" 
+	src="/s2/技研/ha_/image036.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 185" src="/s2/技研/ha_/image037.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 186" src="/s2/技研/ha_/image038.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 187" 
+	src="/s2/技研/ha_/image039.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 188" src="/s2/技研/ha_/image040.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 189" src="/s2/技研/ha_/image041.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 190" 
+	src="/s2/技研/ha_/image042.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 191" src="/s2/技研/ha_/image043.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 192" src="/s2/技研/ha_/image044.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 193" 
+	src="/s2/技研/ha_/image045.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>這邊在安裝過程中一樣會卡住（少截圖），一樣去修改<span lang=EN-US> /usr/sap/HA/ERS10 </span>的目錄權限）</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 194" src="/s2/技研/ha_/image046.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 195" src="/s2/技研/ha_/image047.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>安裝完成</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 196" src="/s2/技研/ha_/image048.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 197" src="/s2/技研/ha_/image049.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 198" 
+	src="/s2/技研/ha_/image050.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 199" src="/s2/技研/ha_/image051.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>3. 
+	</span></b><b><span style='font-size:15.0pt;background:yellow'>將兩台（<span 
+	lang=EN-US>hacert01&amp; hacert02</span>）的<span lang=EN-US> 
+	/usr/sap/sapservices </span>互抄</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=209 id="圖片 1" 
+	src="/s2/技研/ha_/image052.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 200" src="/s2/技研/ha_/image053.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 201" src="/s2/技研/ha_/image054.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 202" src="/s2/技研/ha_/image055.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>安裝元件</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 203" src="/s2/技研/ha_/image056.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 204" src="/s2/技研/ha_/image057.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>4. 
+	</span></b><b><span style='font-size:15.0pt;background:yellow'>參數修改</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=205 id="圖片 3" 
+	src="/s2/技研/ha_/image058.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 205" src="/s2/技研/ha_/image059.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>修改前先備份</p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 206" src="/s2/技研/ha_/image060.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 207" src="/s2/技研/ha_/image061.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 208" 
+	src="/s2/技研/ha_/image062.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 209" src="/s2/技研/ha_/image063.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 210" src="/s2/技研/ha_/image064.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 211" 
+	src="/s2/技研/ha_/image065.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=506 id="圖片 4" 
+	src="/s2/技研/ha_/image066.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 212" src="/s2/技研/ha_/image067.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 213" src="/s2/技研/ha_/image068.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 214" 
+	src="/s2/技研/ha_/image069.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 215" src="/s2/技研/ha_/image070.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 216" src="/s2/技研/ha_/image071.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>5. 
+	</span></b><b><span style='font-size:15.0pt;background:yellow'>修改三台<span 
+	lang=EN-US> hosts</span></span></b><span lang=EN-US><img border=0 width=698 
+	height=436 id="圖片 218" src="/s2/技研/ha_/image072.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 219" 
+	src="/s2/技研/ha_/image073.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 220" src="/s2/技研/ha_/image074.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>6. 
+	Install DB on hacert03</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=99 id="圖片 6" 
+	src="/s2/技研/ha_/image075.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=106 id="圖片 7" 
+	src="/s2/技研/ha_/image076.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 221" src="/s2/技研/ha_/image077.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 222" src="/s2/技研/ha_/image078.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 223" 
+	src="/s2/技研/ha_/image079.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 224" src="/s2/技研/ha_/image080.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 225" src="/s2/技研/ha_/image081.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 226" 
+	src="/s2/技研/ha_/image082.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 227" src="/s2/技研/ha_/image083.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 228" src="/s2/技研/ha_/image084.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 229" 
+	src="/s2/技研/ha_/image085.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 230" src="/s2/技研/ha_/image086.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 231" src="/s2/技研/ha_/image087.jpg"><img 
+
+	border=0 width=698 height=491 id="圖片 232" 
+	src="/s2/技研/ha_/image088.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 233" src="/s2/技研/ha_/image089.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 234" src="/s2/技研/ha_/image090.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 235" 
+	src="/s2/技研/ha_/image091.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 236" src="/s2/技研/ha_/image092.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 237" src="/s2/技研/ha_/image093.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 238" 
+	src="/s2/技研/ha_/image094.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 239" src="/s2/技研/ha_/image095.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 240" src="/s2/技研/ha_/image096.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 241" 
+	src="/s2/技研/ha_/image097.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 242" src="/s2/技研/ha_/image098.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 243" src="/s2/技研/ha_/image099.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 244" 
+	src="/s2/技研/ha_/image100.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 245" src="/s2/技研/ha_/image101.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>7. 
+	Install PAS on hacert03</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=200 id="圖片 8" 
+	src="/s2/技研/ha_/image102.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 246" src="/s2/技研/ha_/image103.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 247" src="/s2/技研/ha_/image104.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 248" 
+	src="/s2/技研/ha_/image105.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 249" src="/s2/技研/ha_/image106.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 250" src="/s2/技研/ha_/image107.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 251" 
+	src="/s2/技研/ha_/image108.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 252" src="/s2/技研/ha_/image109.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 253" src="/s2/技研/ha_/image110.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 254" 
+	src="/s2/技研/ha_/image111.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 255" src="/s2/技研/ha_/image112.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 256" src="/s2/技研/ha_/image113.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 257" 
+	src="/s2/技研/ha_/image114.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 258" src="/s2/技研/ha_/image115.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 259" src="/s2/技研/ha_/image116.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 260" 
+	src="/s2/技研/ha_/image117.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 261" src="/s2/技研/ha_/image118.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 262" src="/s2/技研/ha_/image119.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 263" 
+	src="/s2/技研/ha_/image120.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 264" src="/s2/技研/ha_/image121.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 265" src="/s2/技研/ha_/image122.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 266" 
+	src="/s2/技研/ha_/image123.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 267" src="/s2/技研/ha_/image124.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 268" src="/s2/技研/ha_/image125.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 269" 
+	src="/s2/技研/ha_/image126.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 270" src="/s2/技研/ha_/image127.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 271" src="/s2/技研/ha_/image128.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;color:black; 
+	background:yellow'>8. Install AAS on hacert03</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=174 id="圖片 9" 
+	src="/s2/技研/ha_/image129.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 272" src="/s2/技研/ha_/image130.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 273" src="/s2/技研/ha_/image131.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 274" 
+	src="/s2/技研/ha_/image132.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 275" src="/s2/技研/ha_/image133.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 276" src="/s2/技研/ha_/image134.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 277" 
+	src="/s2/技研/ha_/image135.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 278" src="/s2/技研/ha_/image136.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 279" src="/s2/技研/ha_/image137.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 280" 
+	src="/s2/技研/ha_/image138.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 281" src="/s2/技研/ha_/image139.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 282" src="/s2/技研/ha_/image140.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 283" 
+	src="/s2/技研/ha_/image141.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 284" src="/s2/技研/ha_/image142.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>以下為更新<span lang=EN-US> Kernel</span>動作 將<span lang=EN-US>SAPEXE/SAPEXEDB</span></p> 
+	
+	<p class=MsoNormal>先備份原來路徑的檔案</p> 
+	
+	<p class=MsoNormal>再覆蓋目標目錄<span lang=EN-US>/usr/sap/HA1/SYS/exe/uc/linuxx84_64</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 285" src="/s2/技研/ha_/image143.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 286" src="/s2/技研/ha_/image144.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 287" 
+	src="/s2/技研/ha_/image145.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 288" src="/s2/技研/ha_/image146.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 289" src="/s2/技研/ha_/image147.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 290" 
+	src="/s2/技研/ha_/image148.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 291" src="/s2/技研/ha_/image149.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 292" src="/s2/技研/ha_/image150.jpg"><img 
+
+	border=0 width=698 height=436 id="圖片 293" 
+	src="/s2/技研/ha_/image151.jpg"><img border=0 width=698 height=436 
+
+	id="圖片 294" src="/s2/技研/ha_/image152.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"新細明體",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:15.0pt;background:yellow'>9. 
+	</span></b><b><span style='font-size:15.0pt;background:yellow'>修改<span 
+	lang=EN-US>hosts + </span>啟用<span lang=EN-US>NTP</span></span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=698 height=436 
+	id="圖片 295" src="/s2/技研/ha_/image153.jpg"><img border=0 width=698 
+
+	height=436 id="圖片 296" src="/s2/技研/ha_/image154.jpg"></span></p> 
+
+	
+	<p class=MsoNormal>啟用<span lang=EN-US> NTP</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

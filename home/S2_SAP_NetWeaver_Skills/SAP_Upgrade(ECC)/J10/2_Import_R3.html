@@ -1,0 +1,2099 @@
+<!--
+title: 2_Import_R3_4.6c
+description: 
+published: true
+date: 2023-01-04T03:28:31.681Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T03:16:19.850Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<title>Business Case Description</title> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:"Tms Rmn"; 
+	panose-1:2 2 6 3 4 5 5 2 3 4;} 
+	@font-face 
+	{font-family:Helv; 
+	panose-1:2 11 6 4 2 2 2 3 2 4;} 
+	@font-face 
+	{font-family:Wingdings; 
+	panose-1:5 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:細明體; 
+	panose-1:2 2 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:"Arial Unicode MS"; 
+	panose-1:2 11 6 4 2 2 2 2 2 4;} 
+	@font-face 
+	{font-family:標楷體; 
+	panose-1:3 0 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Menlo Regular";} 
+	@font-face 
+	{font-family:TimesNewRomanPS; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Book Antiqua"; 
+	panose-1:2 4 6 2 5 3 5 3 3 4;} 
+	@font-face 
+	{font-family:"BSO Univers Light";} 
+	@font-face 
+	{font-family:"BSO Palatino";} 
+	@font-face 
+	{font-family:"MS Serif"; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:Cambria; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:SAPDings; 
+	panose-1:0 0 4 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"\@標楷體";} 
+	@font-face 
+	{font-family:"\@細明體"; 
+	panose-1:2 1 6 9 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"\@TimesNewRomanPS"; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:12.0pt; 
+	font-family:細明體;} 
+	h2 
+	{margin:0cm; 
+	text-align:center; 
+	line-height:18.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:16.0pt; 
+	font-family:"Times New Roman",serif;} 
+	h3 
+	{margin-top:0cm; 
+	margin-right:0cm; 
+	margin-bottom:0cm; 
+	margin-left:-7.5pt; 
+	text-align:justify; 
+	text-justify:inter-ideograph; 
+	text-indent:7.5pt; 
+	line-height:18.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:"Arial",sans-serif; 
+	color:black;} 
+	p.MsoHeading9, li.MsoHeading9, div.MsoHeading9 
+	{margin:0cm; 
+	text-align:justify; 
+	text-justify:inter-ideograph; 
+	line-height:12.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:9.0pt; 
+	font-family:"Arial",sans-serif; 
+	color:black; 
+	font-weight:bold;} 
+	p.MsoHeader, li.MsoHeader, div.MsoHeader 
+	{margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:細明體;} 
+	p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2 
+	{mso-style-link:"本文 2 字元"; 
+	margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:"Book Antiqua",serif;} 
+	a:link, span.MsoHyperlink 
+	{font-family:"Arial",sans-serif; 
+	color:windowtext; 
+	font-weight:normal; 
+	text-decoration:none none;} 
+	a:visited, span.MsoHyperlinkFollowed 
+	{font-family:"Arial",sans-serif; 
+	color:windowtext; 
+	text-decoration:none;} 
+	span.2 
+	{mso-style-name:"本文 2 字元"; 
+	mso-style-link:"本文 2"; 
+	font-family:"Book Antiqua",serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.45pt 841.7pt; 
+	margin:64.8pt 36.0pt 64.8pt 36.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	/* List Definitions */ 
+	ol 
+	{margin-bottom:0cm;} 
+	ul 
+	{margin-bottom:0cm;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW link="#000000" vlink="#000000" style='word-wrap:break-word'> 
+	
+	<div class=WordSection1> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><a name="_top"></a><span 
+	lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Software</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Version (From)</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Version (to)</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>OS </span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Database</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>R/3 Kernel</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Version&nbsp; 
+	</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Version&nbsp; 
+	</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>SAP Version</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Info</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Source</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Target</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Host Name</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>IP</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>ASCS SID</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>CI SID</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>SAP <span 
+	style='color:black'>Source </span></span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Source</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Target</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><a name=TOP></a><span class=MsoHyperlinkFollowed><span 
+	lang=EN-US><a href="#Step01">Step 1:</a></span></span></p> 
+
+	
+	<p class=MsoNormal><span class=MsoHyperlink><span lang=EN-US><a href="#Step02">Step 
+
+	2:</a></span></span></p> 
+	
+	<p class=MsoNormal><span class=MsoHyperlink><span lang=EN-US><a href="#Step03">Step 
+
+	3:</a></span></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><a href="#Step04"><span style='font-family: 
+
+	"Arial",sans-serif'>Step 4:</span></a></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><a href="#Step05"><span style='font-family: 
+
+	"Arial",sans-serif'>Step 5:</span></a></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=701 
+	style='width:525.9pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step01><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif'>Step 1:</span></a></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border:solid windowtext 1.0pt; 
+	border-left:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; 
+	border-left:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>OS 
+	</span>安裝時<span style='font-family:"Arial",sans-serif'> </span>要勾選</p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>CPU 2x4 </span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>RAM 24GB</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>Partition </span></b><b><span style='font-size: 
+	13.0pt;color:black'>劃分時</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>SWAP </span></b><b><span style='font-size:13.0pt; 
+	color:black'>空間最少</span></b><b><span style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'> <span lang=EN-US>8GB </span></span></b><b><span 
+	style='font-size:13.0pt;color:black'>可以的話給</span></b><b><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>20GB</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>OS Time</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=355 
+	src="/s2/j10_2/image001.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=357 
+	src="/s2/j10_2/image002.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>install xrdp</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>mount source Disk</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>exp 
+	file Copy</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=177 
+	src="/s2/j10_2/image003.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>1 clone PRD copy exp file to SLM</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>2 SLM copy exp file to PRD</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>/etc/service</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=87 
+	src="/s2/j10_2/image004.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=60 
+	src="/s2/j10_2/image005.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=62 
+	src="/s2/j10_2/image006.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=40 
+	src="/s2/j10_2/image007.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>先把有<span lang=EN-US> Domain </span>的註解掉</p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=265 
+	src="/s2/j10_2/image008.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>修改版本<span lang=EN-US> /etc/SuSE-release</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=83 
+	src="/s2/j10_2/image009.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>change to</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=118 
+	src="/s2/j10_2/image010.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step02><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif;color:black'>Step 2:</span></a><span 
+	lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif; 
+	color:black'>Run Script </span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif; 
+	color:black'>run816145.sh </span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif; 
+	color:black'>on</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>/sapsrc/run816145.sh</span></b></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=46 src="/s2/j10_2/image011.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=333 src="/s2/j10_2/image012.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>run 
+	Script</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>createo_folder.sh</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=55 src="/s2/j10_2/image013.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>run 
+	.INSTALL.sh</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>SOEVM129:/sapsrc # </span></b><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>cp 
+	usrbintemp.tar /tmp</span><span lang=PT-BR style='font-family:"Arial",sans-serif'> 
+	</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>SOEVM129:/sapsrc # </span></b><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>cd /tmp</span></p> 
+	<p class=MsoNormal style='line-height:normal'><b><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>SOEVM129:/tmp 
+	# </span></b><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>mkdir PRE</span></p> 
+	<p class=MsoNormal style='line-height:normal'><b><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>SOEVM129:/tmp 
+	# </span></b><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>tar -xvf usrbintemp.tar -C PRE/</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>SOEVM129:/tmp/PRE/usr/bin/temp # </span></b><span 
+	lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>mv 
+	* /tmp</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=271 src="/s2/j10_2/image014.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>./INSTALL.sh</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=77 src="/s2/j10_2/image015.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Menlo Regular"; 
+	color:black'>copy DBSIZE.TPL</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:5.0pt;font-family:"Menlo Regular"; 
+	color:black'><img border=0 width=479 height=62 
+	src="/s2/j10_2/image016.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US style='font-size:5.0pt;font-family:"Menlo Regular"; 
+	color:black'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>run 
+	sapinst</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:5.0pt;font-family:"Menlo Regular"; 
+	color:black'>export LD_LIBRARY_PATH=/oracle/client/92x_32/lib:/oracle/client/92x_64/lib:/sapmnt/DEV/exe</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:5.0pt;font-family:"Menlo Regular"; 
+	color:black'>export ORA_NLS33=/oracle/client/92x_64/ocommon/nls/admin/data</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=67 
+	src="/s2/j10_2/image017.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>cd /instdir</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>./INSTGUI &amp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=182 
+	src="/s2/j10_2/image018.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=291 
+	src="/s2/j10_2/image019.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>/usr/bin/pre-r3setup.sh ./R3SETUP CENTRAL.R3S</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=287 
+	src="/s2/j10_2/image020.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image021.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image022.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image023.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image024.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image025.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image026.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image027.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=292 
+	src="/s2/j10_2/image028.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image029.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image030.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=291 
+	src="/s2/j10_2/image031.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image032.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image033.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=286 
+	src="/s2/j10_2/image034.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image035.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=291 
+	src="/s2/j10_2/image036.jpg"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image037.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image038.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image039.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image040.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image041.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image042.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span style='font-size:13.0pt;color:red'>重要！！！</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image043.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=286 
+	src="/s2/j10_2/image044.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image045.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image046.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image047.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image048.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image049.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image050.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image051.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image052.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image053.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=287 
+	src="/s2/j10_2/image054.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image055.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image056.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image057.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image058.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image059.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=291 
+	src="/s2/j10_2/image060.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image061.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image062.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image063.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image064.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image065.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image066.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image067.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image068.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=288 
+	src="/s2/j10_2/image069.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image070.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image071.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image072.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=289 
+	src="/s2/j10_2/image073.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image074.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image075.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image076.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US>Migration Key: 1gUfd5M50D401eqtf1Ux3QAw</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=289 
+	src="/s2/j10_2/image077.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=288 
+	src="/s2/j10_2/image078.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image079.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image080.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=289 
+	src="/s2/j10_2/image081.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>Clone</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>Snapshot</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>安裝<span style='font-family:"Arial",sans-serif'> <span 
+	lang=EN-US>Oracle 10.2</span></span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>root</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=332 
+	src="/s2/j10_2/image082.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=33 
+	src="/s2/j10_2/image083.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=282 
+	src="/s2/j10_2/image084.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=376 
+	src="/s2/j10_2/image085.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=377 
+	src="/s2/j10_2/image086.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=378 
+	src="/s2/j10_2/image087.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=376 
+	src="/s2/j10_2/image088.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=374 
+	src="/s2/j10_2/image089.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=378 
+	src="/s2/j10_2/image090.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>Continue</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=376 
+	src="/s2/j10_2/image091.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=378 
+	src="/s2/j10_2/image092.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=329 
+	src="/s2/j10_2/image093.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=375 
+	src="/s2/j10_2/image094.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=373 
+	src="/s2/j10_2/image095.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=48 
+	src="/s2/j10_2/image096.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=36 
+	src="/s2/j10_2/image097.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=375 
+	src="/s2/j10_2/image098.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=372 
+	src="/s2/j10_2/image099.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=373 
+	src="/s2/j10_2/image100.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=374 
+	src="/s2/j10_2/image101.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=372 
+	src="/s2/j10_2/image102.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=376 
+	src="/s2/j10_2/image103.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=373 
+	src="/s2/j10_2/image104.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=374 
+	src="/s2/j10_2/image105.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=354 
+	src="/s2/j10_2/image106.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=372 
+	src="/s2/j10_2/image107.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>check 
+	database</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=354 
+	src="/s2/j10_2/image108.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=126 
+	src="/s2/j10_2/image109.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>修正連結檔案</p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=92 
+	src="/s2/j10_2/image110.gif"></span></b></p> 
+
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>oracle 
+	grant</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>(</span>於<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>Import </span>時做<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>)</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>sqlplus / as sysdba</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>grant dba to OPS$prdadm</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>設定 <span lang=EN-US>oracle </span>參數</p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>(</span>於<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>Import </span>時做<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>)</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>設定 <span lang=EN-US>oracle </span>參數</p> 
+	<p class=MsoNormal><span lang=EN-US>1 create spfile from pfile;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>2 restart sap &amp; oracle</span></p> 
+	<p class=MsoNormal><span lang=EN-US>3 show parameter spfile;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>4 </span>設定參數</p> 
+	<p class=MsoNormal><span lang=EN-US>5 restart sap &amp; oracle</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>Extent 
+	Tablespace</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>(</span>於<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>Import </span>時做<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>)</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>SQL Check 
+	TABLESPACE </span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:13.0pt;font-family:"Menlo Regular";color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>SELECT A.TABLESPACE_NAME, A.BYTES / 1024 / 1024 &quot;Sum 
+	MB&quot;,(A.BYTES - B.BYTES) / 1024 / 1024 &quot;used MB&quot;, B.BYTES / 
+	1024 / 1024 &quot;free MB&quot;,ROUND(((A.BYTES - B.BYTES) / A.BYTES) * 100, 
+	2) &quot;percent_used&quot; FROM (SELECT TABLESPACE_NAME, SUM(BYTES) BYTES 
+	FROM DBA_DATA_FILES GROUP BY TABLESPACE_NAME) A, (SELECT TABLESPACE_NAME, 
+	SUM(BYTES) BYTES, MAX(BYTES) LARGEST FROM DBA_FREE_SPACE GROUP BY 
+	TABLESPACE_NAME) B WHERE A.TABLESPACE_NAME = B.TABLESPACE_NAME ORDER BY 
+	((A.BYTES - B.BYTES) / A.BYTES) DESC</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>mkdir /oracle/DEV/sapdata6/sr3_28</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>alter tablespace PSAPSR3 ADD 
+	DATAFILE'/oracle/DEV/sapdata6/sr3_28/sr3.data28' size 10000M AUTOEXTEND ON 
+	NEXT 100M</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>重啟<span style='font-family:"Arial",sans-serif'> <span 
+	lang=EN-US>sapinst</span></span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>export 
+	LD_LIBRARY_PATH=/oracle/client/92x_32/lib:/oracle/client/92x_64/lib:/sapmnt/PRD/exe</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>export 
+	ORA_NLS33=/oracle/client/92x_64/ocommon/nls/admin/data</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>echo 
+	$LD_LIBRARY_PATH</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>echo 
+	$ORA_NLS33</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>cd /instdir</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>./INSTGUI 
+	&amp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>/usr/bin/pre-r3setup.sh ./R3SETUP CENTRAL.R3S</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=291 
+	src="/s2/j10_2/image111.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image112.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>sap</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image113.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>manager</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image114.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>manager</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image115.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=289 
+	src="/s2/j10_2/image116.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=290 
+	src="/s2/j10_2/image117.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>apmmpa</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=478 height=289 
+	src="/s2/j10_2/image118.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'><img border=0 width=479 height=290 
+	src="/s2/j10_2/image119.gif"></span></b></p> 
+
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>Snap 
+	Shot</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step03><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif;color:black'>Step 3:</span></a><span 
+	lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif;color:black'>Post 
+	installation</span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>ddic/apmmpa</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=314 src="/s2/j10_2/image120.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>sick</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=202 src="/s2/j10_2/image121.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=427 src="/s2/j10_2/image122.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>se06</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=295 src="/s2/j10_2/image123.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>stms</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>Description 
+	: SYSTEM PRD</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=225 src="/s2/j10_2/image124.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=409 src="/s2/j10_2/image125.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=346 src="/s2/j10_2/image126.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=444 src="/s2/j10_2/image127.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>Rz10</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=328 src="/s2/j10_2/image128.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>license</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>slicense</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>Installation 
+	number</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>0020917888</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>key</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=605 src="/s2/j10_2/image129.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=425 src="/s2/j10_2/image130.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step04><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif;color:black'>Step 4:</span></a><span 
+	lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif;color:black'> 
+	Oracle </span><span style='font-size:12.0pt;font-family:細明體;color:black'>調整</span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>設定 <span lang=EN-US>oracle </span>參數</p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>(</span>於<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>Import </span>時做<span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>)</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>設定 <span lang=EN-US>oracle </span>參數</p> 
+	<p class=MsoNormal><span lang=EN-US>1 create spfile from pfile;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>2 restart sap &amp; oracle</span></p> 
+	<p class=MsoNormal><span lang=EN-US>3 show parameter spfile;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>4 </span>設定參數</p> 
+	<p class=MsoNormal><span lang=EN-US>5 restart sap &amp; oracle</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chown oraprd:sapsys brarchive brbackup 
+	brconnect</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chmod 4774 brarchive brbackup brconnect</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chmod 775 brrecover brrestore brspace 
+	brtools</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=127 src="/s2/j10_2/image131.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>chmod 
+	775 /oracle/PRD/sapbackup</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>oraprd</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>sqlplus 
+	/ as sysdba</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>grant 
+	dba to OPS$prdadm</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>Update 
+	statistic</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step05><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif;color:black'>Step 5:</span></a><span 
+	lang=EN-US style='font-size:12.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr height=0> 
+	<td width=218 style='border:none'></td> 
+	<td width=304 style='border:none'></td> 
+	<td width=142 style='border:none'></td> 
+	<td width=38 style='border:none'></td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>APM_Ora10g_ALTER_EVENT_SQL:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET EVENT ='38087 trace name context forever, level 1','10183 trace name 
+	context forever, level 1','10027 trace name context forever, level 1','10028 
+	trace name context forever, level 1','10411 trace name context forever, level 
+	1','10629 trace name context forever, level 32','14532 trace name context 
+	forever, level 1','10142 trace name context forever, level 1','38068 trace name 
+	context forever, level 100','38085 trace name context forever, level 1','44951 
+	trace name context forever, level 1024','10191 trace name context forever, 
+	level 1' SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>APM_Ora10g_ALTER_FIX_CONTROL_SQL:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;_FIX_CONTROL&quot;='4728348:OFF','5099019:ON','5705630:ON','5765456:3','6399597:ON','6430500:ON','6440977:ON','6626018:ON','6670551:ON','6972291:ON','7692248:ON','7891471:ON'SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>APM_Ora10g_ALTER_SET_Para:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;optimizer_index_cost_adj&quot;=20 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;star_transformation_enabled&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;_optimizer_mjc_enabled&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;_sort_elimination_cost_ratio&quot;=10 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;parallel_execution_message_size&quot;=16384 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;parallel_threads_per_cpu&quot;=1 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;query_rewrite_enabled&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;_disable_objstat_del_broadcast&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>ALTER 
+	SYSTEM SET &quot;log_checkpoints_to_alert&quot;=TRUE SCOPE=SPFILE;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

@@ -1,0 +1,1785 @@
+<!--
+title: 3_Upgrade_4.6c_to_ECC6_EHP5
+description: 
+published: true
+date: 2023-01-04T03:37:14.096Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T03:37:11.190Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<title>Business Case Description</title> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:"Tms Rmn"; 
+	panose-1:2 2 6 3 4 5 5 2 3 4;} 
+	@font-face 
+	{font-family:Helv; 
+	panose-1:2 11 6 4 2 2 2 3 2 4;} 
+	@font-face 
+	{font-family:Wingdings; 
+	panose-1:5 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:細明體; 
+	panose-1:2 2 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:"Arial Unicode MS"; 
+	panose-1:2 11 6 4 2 2 2 2 2 4;} 
+	@font-face 
+	{font-family:標楷體; 
+	panose-1:3 0 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Menlo Regular";} 
+	@font-face 
+	{font-family:TimesNewRomanPS; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Book Antiqua"; 
+	panose-1:2 4 6 2 5 3 5 3 3 4;} 
+	@font-face 
+	{font-family:"BSO Univers Light";} 
+	@font-face 
+	{font-family:"BSO Palatino";} 
+	@font-face 
+	{font-family:"MS Serif"; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:Cambria; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:SAPDings; 
+	panose-1:0 0 4 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"\@標楷體";} 
+	@font-face 
+	{font-family:"\@細明體"; 
+	panose-1:2 1 6 9 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"Menlo Bold";} 
+	@font-face 
+	{font-family:"\@TimesNewRomanPS"; 
+	panose-1:0 0 0 0 0 0 0 0 0 0;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:12.0pt; 
+	font-family:細明體;} 
+	h1 
+	{mso-style-link:"標題 1 字元"; 
+	margin:0cm; 
+	text-align:center; 
+	line-height:18.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:18.0pt; 
+	font-family:"Times New Roman",serif; 
+	color:black; 
+	position:relative; 
+	top:12.0pt;} 
+	h2 
+	{margin:0cm; 
+	text-align:center; 
+	line-height:18.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:16.0pt; 
+	font-family:"Times New Roman",serif;} 
+	h3 
+	{margin-top:0cm; 
+	margin-right:0cm; 
+	margin-bottom:0cm; 
+	margin-left:-7.5pt; 
+	text-align:justify; 
+	text-justify:inter-ideograph; 
+	text-indent:7.5pt; 
+	line-height:18.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:"Arial",sans-serif; 
+	color:black;} 
+	p.MsoHeading9, li.MsoHeading9, div.MsoHeading9 
+	{margin:0cm; 
+	text-align:justify; 
+	text-justify:inter-ideograph; 
+	line-height:12.0pt; 
+	page-break-after:avoid; 
+	text-autospace:none; 
+	font-size:9.0pt; 
+	font-family:"Arial",sans-serif; 
+	color:black; 
+	font-weight:bold;} 
+	p.MsoHeader, li.MsoHeader, div.MsoHeader 
+	{margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:細明體;} 
+	p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2 
+	{mso-style-link:"本文 2 字元"; 
+	margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:"Book Antiqua",serif;} 
+	a:link, span.MsoHyperlink 
+	{font-family:"Arial",sans-serif; 
+	color:windowtext; 
+	font-weight:normal; 
+	text-decoration:none none;} 
+	a:visited, span.MsoHyperlinkFollowed 
+	{font-family:"Arial",sans-serif; 
+	color:windowtext; 
+	text-decoration:none;} 
+	span.2 
+	{mso-style-name:"本文 2 字元"; 
+	mso-style-link:"本文 2"; 
+	font-family:"Book Antiqua",serif;} 
+	span.1 
+	{mso-style-name:"標題 1 字元"; 
+	mso-style-link:"標題 1"; 
+	font-family:"Tms Rmn",serif; 
+	color:black; 
+	position:relative; 
+	top:12.0pt; 
+	font-weight:bold;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.45pt 841.7pt; 
+	margin:64.8pt 36.0pt 64.8pt 36.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	/* List Definitions */ 
+	ol 
+	{margin-bottom:0cm;} 
+	ul 
+	{margin-bottom:0cm;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW link="#000000" vlink="#000000" style='word-wrap:break-word'> 
+	
+	<div class=WordSection1> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><a name="_top"></a><span 
+	lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Software</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Version (From)</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Version (to)</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>OS </span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Database</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>R/3 Kernel</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Version&nbsp; 
+	</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Version&nbsp; 
+	</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>SAP Version</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Info</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Source</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Target</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>Host Name</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>IP</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>ASCS SID</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>CI SID</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 
+	style='margin-left:5.4pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:double windowtext 1.5pt; 
+	border-left:double windowtext 1.5pt;border-bottom:none;border-right:none; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>SAP <span 
+	style='color:black'>Source </span></span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-top:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Source</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:double windowtext 1.5pt; 
+	border-left:none;border-bottom:none;border-right:double windowtext 1.5pt; 
+	background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif; 
+	color:black'>Target</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border:none;border-left:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border:none;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=104 valign=top style='width:77.85pt;border-top:none;border-left: 
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right: 
+	none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US 
+	style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=289 valign=top style='width:217.1pt;border:none;border-bottom:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=312 valign=top style='width:233.9pt;border-top:none;border-left: 
+	none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><a name=TOP></a><span class=MsoHyperlinkFollowed><span 
+	lang=EN-US><a href="#Step01">Step 1:</a></span></span></p> 
+
+	
+	<p class=MsoNormal><span class=MsoHyperlink><span lang=EN-US><a href="#Step02">Step 
+
+	2:</a></span></span></p> 
+	
+	<p class=MsoNormal><span class=MsoHyperlink><span lang=EN-US><a href="#Step03">Step 
+
+	3:</a></span></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><a href="#Step04"><span style='font-family: 
+
+	"Arial",sans-serif'>Step 4:</span></a></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><a href="#Step05"><span style='font-family: 
+
+	"Arial",sans-serif'>Step 5:</span></a></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=701 
+	style='width:525.9pt;border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step01><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif'>Step 1:</span></a><span lang=EN-US 
+	style='font-size:12.0pt;font-family:"Arial",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border:solid windowtext 1.0pt; 
+	border-left:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border:solid windowtext 1.0pt; 
+	border-left:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Client 168 </span></p> 
+	<p class=MsoNormal><span lang=EN-US>user soetek</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=460 
+	src="/s2/j10_3/image001.gif"></span></p> 
+
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>Update 
+	SPAM</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><b><span style='color:red'>先關閉</span></b><b><span 
+	lang=EN-US style='font-family:"Arial",sans-serif;color:red'> Aarchive log 
+	mode</span></b></p> 
+	<p class=MsoNormal>確認時間</p> 
+	<p class=MsoNormal><span lang=EN-US>0 License </span>要先裝</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>Installation 
+	number</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>0020917888</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>key</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>7SVJ8TY9PZ6GIBIDGE2G2HCH</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=425 
+	src="/s2/j10_3/image002.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>Import 
+	</span>前已經更新過了</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=346 
+	src="/s2/j10_3/image003.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>R3trans 
+	verision</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>目前版本有超過<span lang=PT-BR style='font-family:"Arial",sans-serif'> 
+	2008 </span>年<span style='font-family:"Arial",sans-serif'> </span>應該可以用</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=305 
+	src="/s2/j10_3/image004.gif"></span></p> 
+
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>TP 
+	Version</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>先不升級</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=371 
+	src="/s2/j10_3/image005.gif"></span></p> 
+
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=300 
+	src="/s2/j10_3/image006.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>Oracle 
+	Preparation</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>1</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>oracle 
+	client copy </span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>instantclient_10205 
+	to instantclient_10202</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=65 
+	src="/s2/j10_3/image007.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>2</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>su - oraprd</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>cat /saparc_up/ORATBSXT.LST</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>soevm129:oraprd 
+	55&gt; cat ORATBSXT.LST </span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>#&nbsp; These 
+	are examples for brspace commands to extend/create the required</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>#&nbsp; 
+	tablespaces. You can adapt them according to your own needs.</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>#&nbsp; Add 
+	option '-c force' to call the commands in batch mode.</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>#&nbsp; 
+	Change option '-autoextend' to 'yes' and set '-maxsize' and '-incrsize'</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>#&nbsp; to 
+	create autoextensible segments.</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 10000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPDIMD -owner SAPSR3 -size 102 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPDIMI -owner SAPSR3 -size 102 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPODSD -owner SAPSR3 -size 112 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPODSI -owner SAPSR3 -size 112 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPFACTD -owner SAPSR3 -size 102 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPFACTI -owner SAPSR3 -size 102 -autoextend 
+	no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tscreate -tablespace PSAPSR3702 -owner SAPSR3 -data both -size 
+	20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3702 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3702 -size 3166 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><b><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>&nbsp;</span></b></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3 -size 4174 -autoextend no</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:5.0pt;font-family:"Menlo Regular";color:black'>brspace 
+	-function tsextend -tablespace PSAPSR3702 -size 20000 -autoextend no</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:5.0pt;font-family:"Menlo Regular"; 
+	color:black'>brspace -function tsextend -tablespace PSAPSR3702 -size 1709 
+	-autoextend no</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>3</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=456 
+	src="/s2/j10_3/image008.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US>copy client</span></b></p> 
+	<p class=MsoNormal><b><span lang=EN-US>cp -rp /sapsrc_up/Orcle_11_2_0_4_client/11x_64 
+	/oracle/client/</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>4 </span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=544 
+	src="/s2/j10_3/image009.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>SQL&gt; 
+	select * from dba_role_privs where 
+	grantee='OPS$PRDADM';&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>GRANTEE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRANTED_ROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ADM DEF</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>------------------------------ 
+	------------------------------ --- ---</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>OPS$PRDADM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	DBA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO&nbsp; YES</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>OPS$PRDADM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	SAPDBA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	NO&nbsp; YES</span></p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>OPS$PRDADM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	RESOURCE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO&nbsp; 
+	YES</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>OPS$PRDADM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	CONNECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	NO&nbsp; YES</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal>使用<span lang=PT-BR style='font-family:"Arial",sans-serif'> 
+	prdadm run brtools</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>chmod 
+	777 /oracle/PRD/sapbackup</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>chmod 
+	777 /oracle/PRD/sapbackup/backPRD.log</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chown oraprd:sapsys brarchive brbackup 
+	brconnect</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chmod 4774 brarchive brbackup brconnect</span></p> 
+	<p class=MsoNormal><span lang=EN-US>chmod 775 brrecover brrestore brspace 
+	brtools</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=126 id="圖片 2" 
+	src="/s2/j10_3/image010.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=26 
+	src="/s2/j10_3/image011.gif"></span></p> 
+
+	<p class=MsoNormal>注意：<span lang=EN-US>group </span>都要 <span lang=EN-US>sapsys 
+	</span>使用以下指令：</p> 
+	<p class=MsoNormal><span lang=EN-US>chown prdadm:sapsys *</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>升級<span lang=EN-US> SAPup</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>先設定兩個<span lang=EN-US> user </span>密碼</p> 
+	<p class=MsoNormal><span lang=EN-US>user :root</span></p> 
+	<p class=MsoNormal><span lang=EN-US>passwd prdadm</span></p> 
+	<p class=MsoNormal><span lang=EN-US>passwd oraprd</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>使用<span lang=EN-US> prdadm user</span></p> 
+	<p class=MsoNormal><span lang=EN-US>1 </span>執行<span lang=EN-US> SAPup </span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>cd</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>/sapsrc_up/51039351_upgrade_master/</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span style='font-size:13.0pt;color:black'>然後執行</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>./STARTUP</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>2 </span>執行<span lang=EN-US>DSUGui </span>可直接用檔案瀏覽器開啟</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=158 
+	src="/s2/j10_3/image012.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=438 
+	src="/s2/j10_3/image013.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=166 
+	src="/s2/j10_3/image014.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=440 
+	src="/s2/j10_3/image015.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>UM Account:</span></p> 
+	<p class=MsoNormal><span lang=EN-US>username:prdadm</span></p> 
+	<p class=MsoNormal><span lang=EN-US>password:P2ssw0rd</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=456 
+	src="/s2/j10_3/image016.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Step 1 Initialization&nbsp; Spent Time : 
+	0sec</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=439 
+	src="/s2/j10_3/image017.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=440 
+	src="/s2/j10_3/image018.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=439 
+	src="/s2/j10_3/image019.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>更新<span style='font-family:"Arial",sans-serif'> <span 
+	lang=EN-US>SAPUP</span></span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Stop SAPup</span></p> 
+	<p class=MsoNormal><span lang=EN-US>root</span></p> 
+	<p class=MsoNormal>執行 <span lang=EN-US>/sapsrc_up/script/sapup_update_PRD.sh</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>確認就好</p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>From 
+	/sapsrc</span></p> 
+	<p class=MsoNormal>解開<span lang=PT-BR style='font-family:"Arial",sans-serif'>NW702_71-20006556.SAR</span>後</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal>將<span lang=EN-US style='font-family:"Arial",sans-serif'>/sapsrc_up/FIX_NW702</span>，</p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>FIX</span><span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>_NW702.UPG &amp; 
+	FIX_NW702_71.info </span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>Copy 
+	to </span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>/sapsrc_up/46c_up_ehp5</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=26 
+	src="/s2/j10_3/image020.gif"></span></p> 
+
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><a name=Step02><span lang=EN-US style='font-size:12.0pt; 
+	font-family:"Arial",sans-serif;color:black'>Step 2:</span></a><span 
+	class=MsoHyperlink><span lang=EN-US style='font-size:12.0pt;color:black'> 
+	Upgrade R3 4.7 to ECC6 EHP5</span></span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 1 Initialization&nbsp; Spent Time : 
+	0sec</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal>先從<span lang=EN-US>SLM </span>下載<span lang=EN-US> 
+	stack.xml or stack.txt</span></p> 
+	<p class=MsoNormal>檔案 然後放在 <span lang=EN-US>/sapsrc_up/46c_up_ehp5_xml</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Then copy to </span></p> 
+	<p class=MsoNormal><span lang=EN-US>Download Directory</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US>/sapsrc_up/46c_up_ehp5</span></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=478 height=370 
+	src="/s2/j10_3/image021.gif"></span></b></p> 
+
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	<p class=MsoNormal>使用<span lang=EN-US> prdadm user </span>來升級 ，<span 
+	lang=EN-US>SAP </span>要開起來。</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>第二次執行 要在 <span lang=EN-US>/usr/sap/PRD/upg/./STARTUP </span>中</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=294 
+	src="/s2/j10_3/image022.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>然後在<span lang=EN-US>GUI</span>介面點選<span lang=EN-US>/usr/sap/PRD/upg/sdt/exe/DSUGui</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=241 
+	src="/s2/j10_3/image023.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=439 
+	src="/s2/j10_3/image024.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=163 
+	src="/s2/j10_3/image025.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>UM Account:</span></p> 
+	<p class=MsoNormal><span lang=EN-US>username:prdadm</span></p> 
+	<p class=MsoNormal><span lang=EN-US>password:P2ssw0rd</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=370 
+	src="/s2/j10_3/image026.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=443 
+	src="/s2/j10_3/image027.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 2 Extraction Time</span>：<span 
+	lang=EN-US>01:00</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=439 
+	src="/s2/j10_3/image028.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=435 height=270 
+	id="圖片 66" src="/s2/j10_3/image029.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=434 height=315 
+	id="圖片 68" src="/s2/j10_3/image030.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=481 
+	src="/s2/j10_3/image031.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>DDIC :apmmpa</span></p> 
+	<p class=MsoNormal><span lang=EN-US>DB SYSTEM SYS :manager</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=438 
+	src="/s2/j10_3/image032.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=478 
+	src="/s2/j10_3/image033.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=482 
+	src="/s2/j10_3/image034.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=478 
+	src="/s2/j10_3/image035.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>這是問之後的系統是否要變成 <span lang=EN-US>Unicode </span></p> 
+	<p class=MsoNormal>這個階段不用</p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=439 
+	src="/s2/j10_3/image036.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=479 
+	src="/s2/j10_3/image037.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 3 Configuration Time</span>：<span 
+	lang=EN-US>01:00</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><b><span style='font-family:細明體;color:red'>先關閉</span></b><b><span 
+	lang=EN-US style='font-family:"Arial",sans-serif;color:red'> Aarchive log 
+	mode</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=102 
+	src="/s2/j10_3/image038.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=480 
+	src="/s2/j10_3/image039.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=478 
+	src="/s2/j10_3/image040.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>/sapsrc_up/51039096_1_Lang</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>/sapsrc_up/51039096_2_Lang</span></b></p> 
+	<p class=MsoBodyText2><b><span lang=EN-US style='font-family:"Arial",sans-serif'>/sapsrc_up/51039096_3_Lang</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=481 
+	src="/s2/j10_3/image041.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>不要勾</p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=460 
+	src="/s2/j10_3/image042.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=460 
+	src="/s2/j10_3/image043.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=434 height=414 
+	id="圖片 30" src="/s2/j10_3/image044.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Stack File </span>給：</p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>/sapsrc_up/46c_up_ehp5/stack.txt</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image045.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=334 
+	src="/s2/j10_3/image046.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>目標 <span lang=EN-US>Component </span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=455 
+	src="/s2/j10_3/image047.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>10:45</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=436 height=415 
+	id="圖片 49" src="/s2/j10_3/image048.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=457 
+	src="/s2/j10_3/image049.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=435 height=213 
+	id="圖片 3" src="/s2/j10_3/image050.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image051.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=460 
+	src="/s2/j10_3/image052.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=436 height=416 
+	id="圖片 80" src="/s2/j10_3/image053.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=462 
+	src="/s2/j10_3/image054.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image055.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=436 height=415 
+	id="圖片 116" src="/s2/j10_3/image056.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image057.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=461 
+	src="/s2/j10_3/image058.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 4 Checks&nbsp;&nbsp;&nbsp;&nbsp; </span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=456 
+	src="/s2/j10_3/image059.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image060.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=434 height=415 
+	id="圖片 170" src="/s2/j10_3/image061.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=457 
+	src="/s2/j10_3/image062.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image063.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	border=0 width=479 height=458 
+	src="/s2/j10_3/image064.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 5 preprocessing&nbsp; </span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image065.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>13:42 </span>開始<span lang=EN-US> Lock</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image066.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=464 
+	src="/s2/j10_3/image067.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=434 height=416 
+	id="圖片 184" src="/s2/j10_3/image068.gif"></span></p> 
+
+	<p class=MsoNormal>需時：<span lang=EN-US>3:40</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=459 
+	src="/s2/j10_3/image069.gif"></span></p> 
+
+	<p class=MsoNormal>登入 <span lang=EN-US>Shadow instance sick </span>錯誤 </p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=462 
+	src="/s2/j10_3/image070.gif"></span></p> 
+
+	<p class=MsoNormal>因為舊系統 是<span lang=EN-US>4.6c</span>用的是<span lang=EN-US> 
+	4.6c </span>的<span lang=EN-US> Kernel</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=289 height=258 
+	src="/s2/j10_3/image071.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>Shadow </span>已經是<span lang=EN-US>720 </span>但使用的還是 
+	<span lang=EN-US>46c </span>的<span lang=EN-US>Kernel</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=286 height=263 
+	src="/s2/j10_3/image072.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>stop SAPup</span></p> 
+	<p class=MsoNormal><span lang=EN-US>shadow system</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>su - prdadm</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>cd /usr/sap/PRD/upg/abap/bin/</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>./SAPup stopshd</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>注意千萬不要用<span lang=EN-US> Unicode Kernel </span>因目前 系統是<span 
+	lang=EN-US> nonUnicode </span>會造成<span lang=EN-US> DB </span>的<span 
+	lang=EN-US>user </span>被 <span lang=EN-US>lock </span>，然後 <span lang=EN-US>shadow 
+	instance </span>會有<span lang=EN-US> GW </span>起不來的異常狀況。</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Note 1629558</span></p> 
+	<p class=MsoNormal>需要換 <span lang=EN-US>Kernel </span></p> 
+	<p class=MsoNormal><span style='color:blue'>執行<span lang=EN-US>Script (</span>更換<span 
+	lang=EN-US>Shadow Kernel)</span></span></p> 
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>/sapsrc_up/script/</span><span 
+	lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular";color:blue'>change_kernel_for_shadow.sh</span></p> 
+	<h1 align=left style='text-align:left'><sub><span lang=EN-US 
+	style='position:relative;top:0pt'>Kernel 720_EXT PL 402</span></sub></h1> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>SAPEXE_402-20006795.SAR</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Bold";color:black'>/sapsrc_up/Kernel_720_EXT_new</span></b><span 
+	lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>/SAPCAR 
+	-xvf SAPEXE_402-20007695.SAR -R SAPEXE_402</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>SAPEXEDB_402-20006791.SAR</span></p> 
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:13.0pt;font-family: 
+	"Menlo Bold";color:black'>/sapsrc_up/Kernel_720_EXT_new</span></b><span 
+	lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>/SAPCAR 
+	-xvf SAPEXE_402-20006791.SAR -R SAPEXEDB_402</span></p> 
+	<p class=MsoNormal>解開後 </p> 
+	<p class=MsoNormal>覆蓋掉<span lang=EN-US>/usr/sap/PRD/upg/abap/exe/</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>&nbsp;</span></p> 
+	<p class=MsoNormal>備份<span lang=EN-US> exe</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>cp -rp /usr/sap/PRD/upg/abap/exe exe_bak</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Source </span>的權限都要是<span lang=EN-US> prdadm:sapsys</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>cp -rp </span><b><span lang=EN-US style='font-size:8.0pt; 
+	font-family:"Menlo Bold";color:black'>/sapsrc_up/Kernel_720_EXT_new</span></b><span 
+	lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>/SAPEXE_402/* 
+	/usr/sap/PRD/upg/abap/exe/</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>cp -rp</span><b><span lang=EN-US style='font-size:8.0pt; 
+	font-family:"Menlo Bold";color:black'>/sapsrc_up/Kernel_720_EXT_new</span></b><span 
+	lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>/SAPEXEDB_402/* 
+	/usr/sap/PRD/upg/abap/exe/</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:blue'>cd /usr/sap/PRD/upg/abap/bin</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:blue'>./SAPup startshd</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=289 height=22 
+	src="/s2/j10_3/image073.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>License OK</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=434 
+	src="/s2/j10_3/image074.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=435 height=238 
+	id="圖片 5" src="/s2/j10_3/image075.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=409 
+	src="/s2/j10_3/image076.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=254 height=354 
+	src="/s2/j10_3/image077.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>使用建立的<span lang=EN-US> User SPDD </span>看需要<span 
+	lang=EN-US>adjustment </span>是哪個</p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=435 height=326 
+	id="圖片 11" src="/s2/j10_3/image078.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=268 
+	src="/s2/j10_3/image079.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=261 
+	src="/s2/j10_3/image080.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=483 
+	src="/s2/j10_3/image081.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=118 
+	src="/s2/j10_3/image082.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>少了一個畫面 <span lang=EN-US>package </span>選擇<span lang=EN-US> 
+	z001 &gt;&gt; save</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=274 
+	src="/s2/j10_3/image083.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=284 
+	src="/s2/j10_3/image084.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=148 
+	src="/s2/j10_3/image085.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=290 
+	src="/s2/j10_3/image086.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=227 
+	src="/s2/j10_3/image087.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>少了畫面</p> 
+	<p class=MsoNormal>是否要<span lang=EN-US> Original </span>選<span lang=EN-US> NO</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=482 height=158 
+	src="/s2/j10_3/image088.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=290 
+	src="/s2/j10_3/image089.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=266 
+	src="/s2/j10_3/image090.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=147 
+	src="/s2/j10_3/image091.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=158 
+	src="/s2/j10_3/image092.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=169 
+	src="/s2/j10_3/image093.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=148 
+	src="/s2/j10_3/image094.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=164 
+	src="/s2/j10_3/image095.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=250 
+	src="/s2/j10_3/image096.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=425 
+	src="/s2/j10_3/image097.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=122 
+	src="/s2/j10_3/image098.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=287 
+	src="/s2/j10_3/image099.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=350 
+	src="/s2/j10_3/image100.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=274 
+	src="/s2/j10_3/image101.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=147 
+	src="/s2/j10_3/image102.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=158 
+	src="/s2/j10_3/image103.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=246 
+	src="/s2/j10_3/image104.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=457 
+	src="/s2/j10_3/image105.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=457 
+	src="/s2/j10_3/image106.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>根據<span lang=EN-US>note 1909524</span>，可以<span lang=EN-US>skip</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=456 
+	src="/s2/j10_3/image107.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=460 
+	src="/s2/j10_3/image108.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=450 
+	src="/s2/j10_3/image109.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=460 
+	src="/s2/j10_3/image110.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>備份<span lang=EN-US> 14:31~14:35</span></p> 
+	<p class=MsoNormal><span lang=EN-US>\usr\sap\PRD\</span></p> 
+	<p class=MsoNormal><span lang=EN-US>DVEBMGS00</span></p> 
+	<p class=MsoNormal><span lang=EN-US>SYS</span></p> 
+	<p class=MsoNormal><span lang=EN-US>upg</span></p> 
+	<p class=MsoNormal><span lang=EN-US>3</span>個目錄</p> 
+	<p class=MsoNormal style='line-height:normal'><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>soevm129:prdadm 
+	52&gt; ls</span></p> 
+	<p class=MsoNormal style='line-height:normal'><b><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Bold";color:#400BD9'>PRD</span></b><span 
+	lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular";color:black'>&nbsp; 
+	</span><b><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Bold"; 
+	color:#400BD9'>tmp</span></b><span lang=EN-US style='font-size:8.0pt; 
+	font-family:"Menlo Regular";color:black'>&nbsp; </span><b><span lang=EN-US 
+	style='font-size:8.0pt;font-family:"Menlo Bold";color:#400BD9'>trans</span></b></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:"Menlo Regular"; 
+	color:black'>soevm129:prdadm 53&gt; cp -rp /usr/sap/PRD /usr/sap/PRD_bak</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.0pt;font-family:"Menlo Regular"; 
+	color:black'><img border=0 width=479 height=61 
+	src="/s2/j10_3/image111.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>使用 <span lang=EN-US>prdadm brtools </span>備份</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>測試機空間不夠</p> 
+	<p class=MsoNormal>不備份直接下一步</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>還需要<span lang=EN-US> 47.5GB</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=147 
+	src="/s2/j10_3/image112.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=112 
+	src="/s2/j10_3/image113.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image114.gif"></span></p> 
+
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 6 Downtime </span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=459 
+	src="/s2/j10_3/image115.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image116.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>再做一次備份</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal>備份<span lang=EN-US> \usr\sap\PRD\</span></p> 
+	<p class=MsoNormal><span lang=EN-US>DVEBMGS00</span></p> 
+	<p class=MsoNormal><span lang=EN-US>SYS</span></p> 
+	<p class=MsoNormal><span lang=EN-US>upg</span></p> 
+	<p class=MsoNormal><span lang=EN-US>3</span>個目錄</p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=48 
+	src="/s2/j10_3/image117.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image118.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image119.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Step 7 Postprocessing</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Time:02:00</span></p> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image120.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=479 height=458 
+	src="/s2/j10_3/image121.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image122.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image123.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=459 
+	src="/s2/j10_3/image124.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=458 
+	src="/s2/j10_3/image125.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US><img border=0 width=478 height=459 
+	src="/s2/j10_3/image126.gif"></span></p> 
+
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=522 colspan=2 valign=top style='width:391.25pt;border:solid windowtext 1.0pt; 
+	border-top:none;background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoNormal style='line-height:normal;text-autospace:ideograph-numeric ideograph-other'><a 
+	name=Step03><span lang=EN-US style='font-family:"Arial",sans-serif; 
+	color:black'>Step 3:</span></a><span lang=EN-US style='font-family:"Arial",sans-serif; 
+	color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span 
+	lang=EN-US style='font-family:"Arial",sans-serif;color:black'>Clone 
+	Sandbox(Backup)</span></p> 
+	</td> 
+	<td width=142 valign=top style='width:106.3pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-size:12.0pt;font-family: 
+	"Arial",sans-serif;color:black'>Spent Time: 00:00</span></p> 
+	</td> 
+	<td width=38 valign=top style='width:1.0cm;border-top:none;border-left:none; 
+	border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	background:#D9D9D9;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span class=MsoHyperlinkFollowed><span lang=EN-US 
+	style='font-size:12.0pt;color:black'><a href="#TOP"><span style='color:black'>TOP</span></a></span></span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=218 valign=top style='width:163.4pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	<td width=483 colspan=3 valign=top style='width:362.5pt;border-top:none; 
+	border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 1.4pt 0cm 1.4pt'> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>1 
+	stopsap</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>2 
+	clone image</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>3 
+	startsap</span></p> 
+	<p class=MsoBodyText2><span lang=PT-BR style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	</td> 
+	</tr> 
+	<tr height=0> 
+	<td width=215 style='border:none'></td> 
+	<td width=306 style='border:none'></td> 
+	<td width=143 style='border:none'></td> 
+	<td width=38 style='border:none'></td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

@@ -1,0 +1,344 @@
+<!--
+title: 0_Upgrade_sapm_spint
+description: 
+published: true
+date: 2023-01-04T02:47:17.709Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T02:47:15.718Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Calibri",sans-serif;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.3pt 841.9pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<p class=MsoNormal><span lang=EN-US>Hosts </span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>改成正確的名稱</span> <span 
+	style='font-family:"新細明體",serif'>＆</span><span lang=EN-US> IP</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=408 
+	src="/s2/j10_0/image001.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Rz10</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Delete Parameter:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>DIR_TRANS</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>重新執行</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>se06</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>stms </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SAPup</span><span style='font-family:"新細明體",serif'>升級過程會出現問題，故需要在</span><span 
+	lang=EN-US>4.6C</span><span style='font-family:"新細明體",serif'>先升級相關的</span><span 
+	lang=EN-US>Component<img width=554 height=318 
+	src="/s2/j10_0/image002.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>目前</span><span 
+	lang=EN-US>4.6C ST-PI</span><span style='font-family:"新細明體",serif'>版本</span><span 
+	lang=EN-US><img width=528 height=258 
+	src="/s2/j10_0/image003.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>登入</span><span 
+	lang=EN-US>sap Client 000/soetek(</span><span style='font-family:"新細明體",serif'>非</span><span 
+	lang=EN-US>ddic)/2012soe</span><span style='font-family:"新細明體",serif'>系統</span><span 
+	lang=EN-US>T-code:spam<img width=554 height=217 
+	src="/s2/j10_0/image004.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>1.SPAM</span><span style='font-family:"新細明體",serif'>先更新</span><span 
+	lang=EN-US>SPAM</span><span style='font-family:"新細明體",serif'>版本到</span><span 
+	lang=EN-US>4.6C/057</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將下載的更新程式放到</span><span 
+	lang=EN-US>c:\usr\sap\trans\eps\in</span><span style='font-family:"新細明體",serif'>中</span><span 
+	lang=EN-US>(share folder</span><span style='font-family:"新細明體",serif'>帳密</span><span 
+	lang=EN-US>:sapinstaller/P2ssw0rd)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=241 id="圖片 4" 
+	src="/s2/j10_0/image005.jpg"><img width=554 
+
+	height=287 id="圖片 7" src="/s2/j10_0/image006.jpg"><img 
+
+	width=554 height=242 id="圖片 10" 
+	src="/s2/j10_0/image007.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=77 
+	src="/s2/j10_0/image008.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=382 
+	src="/s2/j10_0/image009.jpg"><img width=554 
+
+	height=384 id="圖片 22" src="/s2/j10_0/image010.jpg"><img 
+
+	width=554 height=382 id="圖片 25" 
+	src="/s2/j10_0/image011.jpg"><img width=554 
+
+	height=382 id="圖片 28" src="/s2/j10_0/image012.jpg">Time:2:39~2:40</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>2.SAINT</span><span style='font-family: 
+	"新細明體",serif'>更新</span><span lang=EN-US>ST-PI</span><span style='font-family: 
+	"新細明體",serif'>到</span><span lang=EN-US>ST-PI 2005_1_46C</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=288 id="圖片 43" 
+	src="/s2/j10_0/image013.jpg"><img width=554 
+
+	height=253 id="圖片 13" src="/s2/j10_0/image014.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=464 id="圖片 37" 
+	src="/s2/j10_0/image015.jpg"><img width=554 
+
+	height=287 id="圖片 49" src="/s2/j10_0/image016.jpg"><img 
+
+	width=554 height=287 id="圖片 52" 
+	src="/s2/j10_0/image017.jpg"><img width=554 
+
+	height=419 id="圖片 55" src="/s2/j10_0/image018.jpg"><img 
+
+	width=554 height=288 id="圖片 58" 
+	src="/s2/j10_0/image019.jpg"><img width=554 
+
+	height=288 id="圖片 61" src="/s2/j10_0/image020.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=287 id="圖片 73" 
+	src="/s2/j10_0/image021.jpg"><img width=554 
+
+	height=289 id="圖片 76" src="/s2/j10_0/image022.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=290 id="圖片 85" 
+	src="/s2/j10_0/image023.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Time:3:30~3:33</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>3.SPAM</span></b><b><span 
+	style='font-size:16.0pt;font-family:"新細明體",serif'>將</span></b><b><span 
+	lang=EN-US style='font-size:16.0pt'>ST-PI 2005_1_46C</span></b><b><span 
+	style='font-size:16.0pt;font-family:"新細明體",serif'>更新到</span></b><b><span 
+	lang=EN-US style='font-size:16.0pt'>SP08</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Copy</span><span style='font-family:"新細明體",serif'>對應的檔案至</span><span 
+	lang=EN-US>C:\usr\sap\trans\eps\in</span><span style='font-family:"新細明體",serif'>中</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=277 id="圖片 16" 
+	src="/s2/j10_0/image024.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=379 id="圖片 1" 
+	src="/s2/j10_0/image025.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=334 id="圖片 97" 
+	src="/s2/j10_0/image026.jpg"><img width=554 
+
+	height=216 id="圖片 100" src="/s2/j10_0/image027.jpg"><img 
+
+	width=554 height=248 id="圖片 106" 
+	src="/s2/j10_0/image028.jpg"><img width=554 
+
+	height=376 id="圖片 109" src="/s2/j10_0/image029.jpg"><img 
+
+	width=554 height=401 id="圖片 112" 
+	src="/s2/j10_0/image030.jpg"><img width=554 
+
+	height=417 id="圖片 115" src="/s2/j10_0/image031.jpg"><img 
+
+	width=554 height=384 id="圖片 118" 
+	src="/s2/j10_0/image032.jpg"><img width=554 
+
+	height=434 id="圖片 121" src="/s2/j10_0/image033.jpg"><img 
+
+	width=554 height=512 id="圖片 124" 
+	src="/s2/j10_0/image034.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=289 id="圖片 127" 
+	src="/s2/j10_0/image035.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=310 id="圖片 130" 
+	src="/s2/j10_0/image036.jpg"><img width=554 
+
+	height=384 id="圖片 133" src="/s2/j10_0/image037.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=382 id="圖片 136" 
+	src="/s2/j10_0/image038.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=288 id="圖片 139" 
+	src="/s2/j10_0/image039.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Time:3:54~4:12</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>4.</span><span style='font-family:"新細明體",serif'>升級</span><span 
+	lang=EN-US>BASIS 4.6C</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Copy</span><span style='font-family:"新細明體",serif'>相關的</span><span 
+	lang=EN-US>Basis</span><span style='font-family:"新細明體",serif'>相關檔案</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=290 id="圖片 142" 
+	src="/s2/j10_0/image040.jpg"></span><span 
+
+	lang=EN-US>&nbsp;<img width=554 height=369 id="圖片 145" 
+	src="/s2/j10_0/image041.jpg">&nbsp;<img width=554 
+
+	height=290 id="圖片 148" src="/s2/j10_0/image042.jpg">&nbsp;<img 
+
+	width=554 height=289 id="圖片 151" 
+	src="/s2/j10_0/image043.jpg">&nbsp;<img width=554 
+
+	height=429 id="圖片 154" src="/s2/j10_0/image044.jpg">&nbsp;<img 
+
+	width=554 height=310 id="圖片 157" 
+	src="/s2/j10_0/image045.jpg">&nbsp;<img width=554 
+
+	height=290 id="圖片 160" src="/s2/j10_0/image046.jpg">&nbsp;<img 
+
+	width=554 height=445 id="圖片 163" 
+	src="/s2/j10_0/image047.jpg">&nbsp;<img width=554 
+
+	height=291 id="圖片 166" src="/s2/j10_0/image048.jpg">&nbsp;<img 
+
+	width=554 height=271 id="圖片 169" 
+	src="/s2/j10_0/image049.jpg">&nbsp;<img width=554 
+
+	height=440 id="圖片 172" src="/s2/j10_0/image050.jpg">Time:16:40~16:51 
+
+	fail(Patch61</span><span style='font-family:"新細明體",serif'>後亮紅燈</span><span 
+	lang=EN-US>)</span><span style='font-family:"新細明體",serif'>，重新按車車跑一次</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=426 id="圖片 175" 
+	src="/s2/j10_0/image051.jpg"></span><span 
+
+	lang=EN-US>&nbsp;<img width=554 height=234 id="圖片 178" 
+	src="/s2/j10_0/image052.jpg">&nbsp;<img width=554 
+
+	height=218 id="圖片 181" src="/s2/j10_0/image053.jpg">&nbsp;<img 
+
+	width=554 height=396 id="圖片 184" 
+	src="/s2/j10_0/image054.jpg">copy ABA</span><span 
+
+	style='font-family:"新細明體",serif'>相關檔案</span> <span lang=EN-US><img width=554 
+	height=367 id="圖片 187" src="/s2/j10_0/image055.jpg"></span><span 
+
+	lang=EN-US>&nbsp;<img width=554 height=234 id="圖片 190" 
+	src="/s2/j10_0/image056.jpg">&nbsp;<img width=554 
+
+	height=218 id="圖片 193" src="/s2/j10_0/image057.jpg">&nbsp;<img 
+
+	width=554 height=417 id="圖片 196" 
+	src="/s2/j10_0/image058.jpg">&nbsp;<img width=554 
+
+	height=209 id="圖片 199" src="/s2/j10_0/image059.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=295 id="圖片 19" 
+	src="/s2/j10_0/image060.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp; <img width=554 height=214 id="圖片 205" 
+	src="/s2/j10_0/image061.jpg">&nbsp;<img width=554 
+
+	height=318 id="圖片 208" src="/s2/j10_0/image062.jpg">&nbsp;<img 
+
+	width=554 height=272 id="圖片 211" 
+	src="/s2/j10_0/image063.jpg">&nbsp;<img width=554 
+
+	height=211 id="圖片 214" src="/s2/j10_0/image064.jpg">Time:15:50~16:08</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=426 id="圖片 217" 
+	src="/s2/j10_0/image065.jpg"></span><span 
+
+	style='font-family:"新細明體",serif'>升級完成</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

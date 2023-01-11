@@ -1,0 +1,147 @@
+<!--
+title: APM_Upgrade_後手動調整_Basis
+description: 
+published: true
+date: 2023-01-04T04:12:09.584Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T04:12:07.702Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Calibri",sans-serif;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.3pt 841.9pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<p class=MsoNormal><span lang=EN-US>1.SAP Print</span><span style='font-family: 
+	"新細明體",serif'>問題</span><span lang=EN-US>:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>由於要同時相容於舊的</span><span 
+	lang=EN-US>Non-unicode</span><span style='font-family:"新細明體",serif'>系統的罕見字編碼</span><span 
+	lang=EN-US>:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:SPAD</span><span style='font-family: 
+	"新細明體",serif'>要調整</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=174 id="圖片 1" 
+	src="/s2/j10_7_2/image001.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>其中</span><span 
+	lang=EN-US>LOCL</span><span style='font-family:"新細明體",serif'>要改為新的</span><span 
+	lang=EN-US>Device Type:SWINCFT </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=241 id="圖片 4" 
+	src="/s2/j10_7_2/image002.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><a name="OLE_LINK1"></a><a name="OLE_LINK2"></a><a 
+	name="OLE_LINK3"></a><a name="OLE_LINK4"><span lang=EN-US>Access Method</span></a><span 
+	style='font-family:"新細明體",serif'>維持</span><span lang=EN-US>F:Printing on Front 
+	End Computer</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>另外要多建一個</span><span 
+	lang=EN-US>LOCL_OLD</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Device Type:TWSAPWIN</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Access Method</span><span style='font-family: 
+	"新細明體",serif'>維持</span><span lang=EN-US>F:Printing on Front End Computer</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>2.Tx:MM60&nbsp; template is 
+	missing:sap_sm.xls</span><span style='font-family:"新細明體",serif'>問題</span><span 
+	lang=EN-US><img width=554 height=104 id="圖片 7" 
+	src="/s2/j10_7_2/image003.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Ans:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>3. img</span><span style='font-family:"新細明體",serif'>設定</span><span 
+	lang=EN-US>(Tcode: SPRO) </span><span style='font-family:"新細明體",serif'>無法用望遠鏡找</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=253 id="圖片 10" 
+	src="/s2/j10_7_2/image004.jpg"></span><span lang=EN-US>&nbsp;<img 
+
+	width=554 height=393 id="圖片 13" src="/s2/j10_7_2/image005.jpg">&nbsp;<img 
+
+	width=554 height=258 id="圖片 16" src="/s2/j10_7_2/image006.jpg"></span><span 
+
+	style='font-family:"新細明體",serif'>必須更新</span><span lang=EN-US>Index</span><span 
+	style='font-family:"新細明體",serif'>後才不會有問題</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>4.</span><span lang=EN-US style='font-family: 
+	"Arial",sans-serif'> Tx: SBWP(SAP Mail</span><span style='font-family:"新細明體",serif'>設定補充</span><span 
+	lang=EN-US style='font-family:"Arial",sans-serif'>)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=103 height=65 
+	src="/s2/j10_7_2/image007.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>5.Tx:STMS</span><span style='font-family: 
+	"新細明體",serif'>去掉大車車</span><span lang=EN-US>(</span><span style='font-family: 
+	"新細明體",serif'>登入</span><span lang=EN-US>DEV</span><span style='font-family: 
+	"新細明體",serif'>去修改</span><span lang=EN-US>STMS</span><span style='font-family: 
+	"新細明體",serif'>中</span><span lang=EN-US>PRD</span><span style='font-family:"新細明體",serif'>的設定</span><span 
+	lang=EN-US>)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=224 id="圖片 2" 
+	src="/s2/j10_7_2/image008.jpg"><img width=554 height=92 
+
+	id="圖片 8" src="/s2/j10_7_2/image009.jpg"><img width=554 
+
+	height=408 id="圖片 11" src="/s2/j10_7_2/image010.jpg"></span></p> 
+
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

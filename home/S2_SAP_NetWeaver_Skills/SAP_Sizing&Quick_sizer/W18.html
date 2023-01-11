@@ -1,0 +1,1050 @@
+<!--
+title: W18-How to size BW4HANA
+description: 
+published: true
+date: 2023-01-05T01:35:06.560Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T07:37:53.785Z
+-->
+
+
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:新細明體;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"PingFang TC Regular";}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Cambria",serif;}
+h2
+	{mso-style-link:"標題 2 字元";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"新細明體",serif;
+	font-weight:bold;}
+span.2
+	{mso-style-name:"標題 2 字元";
+	mso-style-link:"標題 2";
+	font-family:"新細明體",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Cambria",serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 89.85pt 72.0pt 89.85pt;
+	layout-grid:21.15pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-TW link=blue vlink=purple style='word-wrap:break-word;text-justify-trim:
+punctuation'>
+
+<div class=WordSection1 style='layout-grid:21.15pt'>
+
+<h2 align=center style='text-align:center'><span lang=EN-US style='font-size:
+16.0pt'>How to size BW/4HANA using SAP quicksizer tool</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>You need the provide the following
+information as sizing input</span></p>
+
+<p class=MsoNormal style='margin-left:21.25pt'><b><span lang=EN-US
+style='font-size:10.0pt'>Table 1: Throughput – User Groups: Reporting &amp;
+Analysis</span></b></p>
+
+<table class=MsoTable15Grid5DarkAccent4 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:42.2pt'>
+  <td width=114 valign=top style='width:85.35pt;border:solid white 1.0pt;
+  border-right:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element</span></b></p>
+  </td>
+  <td width=139 valign=top style='width:104.35pt;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element
+  short text</span></b></p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW
+  </span></b><b><span style='font-size:10.0pt;font-family:"新細明體",serif;
+  color:white'>使用者數</span></b></p>
+  </td>
+  <td width=68 valign=top style='width:51.25pt;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>%
+  Report views</span></b></p>
+  </td>
+  <td width=76 valign=top style='width:56.85pt;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>%
+  OLAP Analysis</span></b></p>
+  </td>
+  <td width=68 valign=top style='width:51.35pt;border:solid white 1.0pt;
+  border-left:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:42.2pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>%
+  Data Explore</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:85.1pt'>
+  <td width=114 valign=top style='width:85.35pt;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW/4H-INFO</span></b></p>
+  </td>
+  <td width=139 valign=top style='width:104.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>Information
+  consumers on BW/4HANA</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>(</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>底度用戶</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'> : </span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>每小時執行</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'>1</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>個</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'> Query)</span></p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;background:
+  #CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>80%</span></b></p>
+  </td>
+  <td width=76 valign=top style='width:56.85pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>20%</span></b></p>
+  </td>
+  <td width=68 valign=top style='width:51.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>0</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:84.45pt'>
+  <td width=114 valign=top style='width:85.35pt;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW/4H-BUSINESS</span></b></p>
+  </td>
+  <td width=139 valign=top style='width:104.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#E5DFEC;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>Business
+  users on BW/4HANA</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>(</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>中度用戶</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'>: </span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>每小時執行</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'>11</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>個</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'> Query)</span></p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;background:
+  #E5DFEC;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#E5DFEC;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>50%</span></b></p>
+  </td>
+  <td width=76 valign=top style='width:56.85pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#E5DFEC;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>50%</span></b></p>
+  </td>
+  <td width=68 valign=top style='width:51.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#E5DFEC;padding:0cm 5.4pt 0cm 5.4pt;height:84.45pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>0</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:85.1pt'>
+  <td width=114 valign=top style='width:85.35pt;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW/4H-EXPERT</span></b></p>
+  </td>
+  <td width=139 valign=top style='width:104.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>Expert
+  users on BW/4HANA</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>(</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>高度用戶</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'>: </span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>每小時執行</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'>33</span><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>個</span><span
+  lang=EN-US style='font-size:10.0pt;color:black'> Query)</span></p>
+  </td>
+  <td width=55 valign=top style='width:41.0pt;border-top:none;border-left:none;
+  border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;background:
+  #CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width=68 valign=top style='width:51.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>0</span></b></p>
+  </td>
+  <td width=76 valign=top style='width:56.85pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>0</span></b></p>
+  </td>
+  <td width=68 valign=top style='width:51.35pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:85.1pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>100%</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:21.25pt'><b><span lang=EN-US>Table 2: Throughput
+– Data Upload to SAP NetWeaver BW</span></b></p>
+
+<table class=MsoTable15Grid5DarkAccent4 border=1 cellspacing=0 cellpadding=0
+ width="93%" style='width:93.52%;border-collapse:collapse;border:none'>
+ <tr style='height:45.55pt'>
+  <td width="20%" valign=top style='width:20.38%;border:solid white 1.0pt;
+  border-right:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element</span></b></p>
+  </td>
+  <td width="31%" valign=top style='width:31.68%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element
+  short text</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.7%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>A/P</span></b></p>
+  </td>
+  <td width="23%" valign=top style='width:23.74%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Loaded
+  data records</span></b></p>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>(</span></b><b><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:white'>每天載入</span></b><b><span
+  lang=EN-US style='font-size:10.0pt;color:white'>BW</span></b><b><span
+  style='font-size:10.0pt;font-family:"新細明體",serif;color:white'>的資料筆數</span></b><b><span
+  lang=EN-US style='font-size:10.0pt;color:white'>)</span></b></p>
+  </td>
+  <td width="8%" valign=top style='width:8.74%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Start
+  time</span></b></p>
+  </td>
+  <td width="8%" valign=top style='width:8.74%;border:solid white 1.0pt;
+  border-left:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.55pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>End
+  time</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:22.8pt'>
+  <td width="20%" valign=top style='width:20.38%;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW/4H-UPLOAD</span></b></p>
+  </td>
+  <td width="31%" valign=top style='width:31.68%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>Objects
+  uploaded to BW/4HANA</span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.7%;border-top:none;border-left:none;
+  border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;background:
+  #CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:"新細明體",serif;
+  color:black'>每天</span></p>
+  </td>
+  <td width="23%" valign=top style='width:23.74%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.74%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>12:00</span></b></p>
+  </td>
+  <td width="8%" valign=top style='width:8.74%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:22.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>13:00</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:21.25pt'><b><span lang=EN-US>Table 3:
+Throughput – BW on HANA Row Tables Footprint and Column Tables Footprint</span></b></p>
+
+<table class=MsoTable15Grid5DarkAccent4 border=1 cellspacing=0 cellpadding=0
+ width="92%" style='width:92.8%;border-collapse:collapse;border:none'>
+ <tr style='height:67.8pt'>
+  <td width="19%" valign=top style='width:19.52%;border:solid white 1.0pt;
+  border-right:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:67.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element</span></b></p>
+  </td>
+  <td width="34%" valign=top style='width:34.1%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:67.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Element
+  short text</span></b></p>
+  </td>
+  <td width="14%" valign=top style='width:14.32%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:67.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Column
+  Store tables footprint (report)</span></b></p>
+  </td>
+  <td width="16%" valign=top style='width:16.64%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:67.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Column
+  Compression factor Disk </span></b><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Wingdings;color:white'>&agrave;</span></b><b><span lang=EN-US
+  style='font-size:10.0pt;color:white'> MEM</span></b></p>
+  </td>
+  <td width="15%" valign=top style='width:15.42%;border:solid white 1.0pt;
+  border-left:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:67.8pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>Row
+  Store Table footprint (from report)</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:45.15pt'>
+  <td width="19%" valign=top style='width:19.52%;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:45.15pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:white'>BW/4H-TABLES</span></b></p>
+  </td>
+  <td width="34%" valign=top style='width:34.1%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:45.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black'>BW/4HANA
+  Tables footprint analysis with report</span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.32%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:45.15pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="16%" valign=top style='width:16.64%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:45.15pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>4</span></b></p>
+  </td>
+  <td width="15%" valign=top style='width:15.42%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:45.15pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;color:black'>40</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:21.25pt'><b><span lang=EN-US>Table 4:
+Throughput – Definition of Advanced DataStore Objects in HANA</span></b></p>
+
+<table class=MsoTable15Grid5DarkAccent4 border=1 cellspacing=0 cellpadding=0
+ width="87%" style='width:87.64%;border-collapse:collapse;border:none'>
+ <tr style='height:173.6pt'>
+  <td width="10%" valign=top style='width:10.18%;border:solid white 1.0pt;
+  border-right:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Element</span></b></p>
+  </td>
+  <td width="12%" valign=top style='width:12.86%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Element
+  short text</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.16%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>A/P</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>&nbsp;</span></b><b><span
+  style='font-size:8.0pt;font-family:"新細明體",serif;color:white'>多少個數值欄位數</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>&nbsp;</span></b><b><span
+  style='font-size:8.0pt;font-family:"新細明體",serif;color:white'>多少個文字欄位</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:"新細明體",serif;
+  color:white'>文字欄位平均長度</span></b></p>
+  </td>
+  <td width="9%" valign=top style='width:9.5%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Write
+  Opt. ?</span></b></p>
+  </td>
+  <td width="11%" valign=top style='width:11.58%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Compress
+  factor Disk </span></b><b><span lang=EN-US style='font-size:8.0pt;font-family:
+  Wingdings;color:white'>&agrave;</span></b><b><span lang=EN-US style='font-size:8.0pt;
+  color:white'> MEM</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span style='font-size:8.0pt;font-family:"新細明體",serif;
+  color:white'>起始載入筆數</span></b></p>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>(</span></b><b><span
+  style='font-size:8.0pt;font-family:"新細明體",serif;color:white'>百萬筆為單位</span></b><b><span
+  lang=EN-US style='font-size:8.0pt;color:white'>)</span></b></p>
+  </td>
+  <td width="12%" valign=top style='width:12.78%;border-top:solid white 1.0pt;
+  border-left:none;border-bottom:solid white 1.0pt;border-right:none;
+  background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Periodic
+  Load/1000</span></b></p>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>(</span></b><b><span
+  style='font-size:8.0pt;font-family:"新細明體",serif;color:white'>千筆為單位</span></b><b><span
+  lang=EN-US style='font-size:8.0pt;color:white'>)</span></b></p>
+  </td>
+  <td width="9%" valign=top style='width:9.62%;border:solid white 1.0pt;
+  border-left:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>Periods</span></b></p>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>(</span></b><b><span
+  style='font-size:8.0pt;font-family:"新細明體",serif;color:white'>多少次定期</span></b><b><span
+  lang=EN-US style='font-size:8.0pt;color:white'>)</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:98.75pt'>
+  <td width="10%" valign=top style='width:10.18%;border:solid white 1.0pt;
+  border-top:none;background:#8064A2;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:white'>ADSO</span></b></p>
+  </td>
+  <td width="12%" valign=top style='width:12.86%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black'>Advanced
+  DataStore Object BW/4HANA</span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.16%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt;font-family:"新細明體",serif;
+  color:black'>每年</span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.5%;border-top:none;border-left:none;
+  border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;background:
+  #CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>YES/NO</span></p>
+  </td>
+  <td width="11%" valign=top style='width:11.58%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:8.0pt;color:black'>4</span></b></p>
+  </td>
+  <td width="6%" valign=top style='width:6.82%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="12%" valign=top style='width:12.78%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.62%;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  background:#CCC0D9;padding:0cm 5.4pt 0cm 5.4pt;height:98.75pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;color:black;
+  background:yellow'>?????</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"新細明體",serif'>以下為原廠說明</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:18.0pt;font-family:
+"Arial",sans-serif;color:black'>SAP&nbsp;<a name=BW4HANA>BW/4HANA</a></span></b></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr style='height:21.0pt'>
+  <td style='padding:4.0pt 4.0pt 4.0pt 4.0pt;height:21.0pt'>
+  <div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;font-family:"PingFang TC Regular"'>
+  <hr size=0 width="100%" noshade style='color:#AAAAAA' align=center>
+  </span></div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"新細明體",serif;
+display:none'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width=446 style='width:334.35pt'>
+ <tr style='height:68.75pt'>
+  <td valign=top style='background:#CBDCE6;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:68.75pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:9.0pt;font-family:
+  "Arial",sans-serif'>SAP BW/4HANA</span></b></p>
+  </td>
+  <td width=355 valign=top style='width:266.15pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:68.75pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:9.0pt;font-family:
+  "Arial",sans-serif'>Definition&nbsp;</span></b><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial",sans-serif'><br>
+  HANA memory sizing is derived from the size of the tables in the source
+  database. Note that only tables must be taken into account. Space for
+  indexes, temporary table spaces etc. must be excluded.<br>
+  If you intend to migrate an existing SAP BW system to the SAP HANA database,
+  you need to run the sizing report attached to</span><span lang=EN-US
+  style='font-size:9.0pt'><a
+  href="https://launchpad.support.sap.com/#/notes/2296290"><span
+  style='font-family:"Arial",sans-serif'>&nbsp;SAP note 2296290</span></a></span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial",sans-serif'>. If you
+  want to size a BW system from scratch, you can enter details of the BW data
+  model (InfoCubes and DataStore Objects) to create a sizing for HANA.</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;font-family:"Arial",sans-serif'>For
+  more information about how to size BW on HANA listen to this&nbsp;</span><span
+  lang=EN-US style='font-size:9.0pt'><a
+  href="https://sap.na.pgiconnect.com/p63537314"><span style='font-family:"Arial",sans-serif'>recording</span></a></span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial",sans-serif'>.</span></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>
+
+<hr size=0 width="100%" noshade style='color:black' align=center>
+
+</span></div>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%;margin-left:1.0pt'>
+ <tr style='height:64.0pt'>
+  <td width="26%" valign=top style='width:26.1%;background:#CBDCE6;padding:
+  4.0pt 4.0pt 4.0pt 4.0pt;height:64.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>SAP BW/4HANA- User Groups: Reporting &amp; Analysis&nbsp;<span
+  style='color:black'><br>
+  </span></span></b><i><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:black'>BW4H-INFO,<br>
+  BW4H-BUSINESS,<br>
+  BW4H-EXPERT</span></i><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:black'><br>
+  <br>
+  &nbsp;</span></b></p>
+  </td>
+  <td width="73%" valign=top style='width:73.2%;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:64.0pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Find
+  information for the columns of this table below:</span></p>
+  <ul type=disc>
+   <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+       "Arial",sans-serif'>BW Users&nbsp;</span></b><span lang=EN-US
+       style='font-size:10.0pt;font-family:"Arial",sans-serif'>(column &quot;BW
+       user&quot;)<b>&nbsp;- Definition&nbsp;</b><br>
+       In NetWeaver BW, we distinguish roughly between user types according to
+       their frequency of activity and the reporting they will normally
+       do.&nbsp;</span></li>
+  </ul>
+  <table class=MsoNormalTable border=1 cellspacing=3 cellpadding=0 width="85%"
+   style='width:85.0%;margin-left:36.0pt;border:outset black 1.0pt'>
+   <tr>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Active User Type&nbsp;</span></b></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Navigation Steps per Hour&nbsp;</span></b></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>This user will predominantly ...</span></b></p>
+    </td>
+   </tr>
+   <tr>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><a name=Normal2></a><span lang=EN-US style='font-size:
+    10.0pt;font-family:"Arial",sans-serif'>Information Consumer</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>1</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>... view predefined and static reports</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Business User</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>11</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>... navigate within reports, do slicing and dicing, but
+    usually cause moderate system load</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><a name=Power2></a><span lang=EN-US style='font-size:
+    10.0pt;font-family:"Arial",sans-serif'>BW&nbsp; Expert&nbsp;</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>33 and more</span></p>
+    </td>
+    <td width="15%" style='width:15.0%;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>... run ad-hoc queries with a high probability of
+    causing significant database load</span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif;
+  color:red'><br>
+  </span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>A
+  navigation step includes drilling down in the reports and corresponds to nine
+  dialog steps in the SD benchmark.&nbsp;If you don't know the user
+  distribution, a typical ratio in the NetWeaver BW environment is 71% : 26% :
+  3% (Information Consumer : Business User : BW Expert).&nbsp;<span
+  style='color:red'><br>
+  <br>
+  </span><b>Comment</b></span></p>
+  <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt'><span
+  lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>The
+  system automatically calculates the Java parts which are shown at the result
+  level.</span></p>
+  <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt'><span
+  lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>If
+  BW Java is not used, you should add 5 % to the SAPS of the application
+  server.</span></p>
+  <ul type=disc>
+   <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+       "Arial",sans-serif'>Report Viewing, OLAP Analysis, and Data
+       Exploration&nbsp;</span></b><span lang=EN-US style='font-size:10.0pt;
+       font-family:"Arial",sans-serif'>(columns &quot;Report.&quot;,
+       &quot;OLAP&quot;, and &quot;Explor.&quot;) -&nbsp;<b>Definition</b><br>
+       Collection of a selection of characteristics and key figures
+       (InfoObjects) for the analysis of the data of an InfoProvider. A query
+       always refers exactly to one InfoProvider, whereas you can define as
+       many queries as you like for each InfoProvider.<br>
+       <br>
+       For sizing purposes we distinguish between three query types which are
+       defined by the load they create in the system.&nbsp;</span></li>
+  </ul>
+  <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt'><a
+  name=easy1><span lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Report
+  Viewing</span></a><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>:
+  Predefined, static, reports causing insignificant database load</span></p>
+  <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt'><a
+  name=med1><span lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>OLAP
+  Analysis</span></a><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>:
+  Slicing and dicing, navigating in reports</span></p>
+  <p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt'><a
+  name=heavy1><span lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Data
+  Exploration</span></a><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>: Data mining, that is ad-hoc reports with unpredictable
+  navigation paths, access of detail data, full table scans&nbsp;</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Any
+  user can do any type of query. However, experience shows a certain activity
+  pattern, as you can see in the table below.</span></p>
+  <table class=MsoNormalTable border=1 cellspacing=3 cellpadding=0 width=303
+   style='width:227.6pt;margin-left:36.0pt;border:outset black 1.0pt'>
+   <tr style='height:20.65pt'>
+    <td width=60 style='width:45.0pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Query Type&nbsp;</span></b></p>
+    </td>
+    <td width=51 style='width:38.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Report Viewing</span></b></p>
+    </td>
+    <td width=55 style='width:41.05pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>OLAP Analysis</span></b></p>
+    </td>
+    <td width=66 style='width:49.35pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Data Exploration</span></b></p>
+    </td>
+    <td width=60 style='width:45.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Total Percent</span></b></p>
+    </td>
+   </tr>
+   <tr style='height:40.7pt'>
+    <td width=60 style='width:45.0pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:40.7pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Information Consumer</span></p>
+    </td>
+    <td width=51 style='width:38.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:40.7pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>80%</span></p>
+    </td>
+    <td width=55 style='width:41.05pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:40.7pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>20%</span></p>
+    </td>
+    <td width=66 style='width:49.35pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:40.7pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>0%</span></p>
+    </td>
+    <td width=60 style='width:45.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:40.7pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>100%</span></p>
+    </td>
+   </tr>
+   <tr style='height:20.05pt'>
+    <td width=60 style='width:45.0pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.05pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Business User</span></p>
+    </td>
+    <td width=51 style='width:38.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.05pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>50%</span></p>
+    </td>
+    <td width=55 style='width:41.05pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.05pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>50%</span></p>
+    </td>
+    <td width=66 style='width:49.35pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.05pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>0%</span></p>
+    </td>
+    <td width=60 style='width:45.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.05pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>100%</span></p>
+    </td>
+   </tr>
+   <tr style='height:20.65pt'>
+    <td width=60 style='width:45.0pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>BW Expert&nbsp;</span></p>
+    </td>
+    <td width=51 style='width:38.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>0%</span></p>
+    </td>
+    <td width=55 style='width:41.05pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>0%</span></p>
+    </td>
+    <td width=66 style='width:49.35pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>100%</span></p>
+    </td>
+    <td width=60 style='width:45.1pt;border:inset black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+    height:20.65pt'>
+    <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>100%</span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt;font-family:"新細明體",serif;color:black'>
+
+<hr size=0 width="100%" noshade style='color:black' align=center>
+
+</span></div>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="86%"
+ style='width:86.44%'>
+ <tr style='height:69.3pt'>
+  <td width="27%" valign=top style='width:27.36%;background:#CBDCE6;padding:
+  4.0pt 4.0pt 4.0pt 4.0pt;height:69.3pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>SAP BW/4HANA - Data Upload<span style='color:black'><br>
+  </span></span></b><i><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:black'>BW4H-UPLOAD</span></i></p>
+  </td>
+  <td width="71%" valign=top style='width:71.82%;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:69.3pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>Definition</span></b><span lang=EN-US style='font-size:
+  10.0pt;font-family:"Arial",sans-serif'><br>
+  In this section you can specify how many records you need to upload within
+  your peak time interval.</span></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt;font-family:"新細明體",serif'>
+
+<hr size=0 width="100%" noshade style='color:black' align=center>
+
+</span></div>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="82%"
+ style='width:82.84%'>
+ <tr style='height:64.85pt'>
+  <td width="29%" valign=top style='width:29.86%;background:#CBDCE6;padding:
+  4.0pt 4.0pt 4.0pt 4.0pt;height:64.85pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>SAP BW/4HANA - BW on HANA Row Tables Foortprint and
+  Column Tables Footprint<span style='color:black'><br>
+  </span></span></b><i><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:black'>BW4H-TABLES</span></i></p>
+  </td>
+  <td width="69%" valign=top style='width:69.28%;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:64.85pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>Specifics for the sizing element BW4H-TABLES&nbsp;<br>
+  </span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>If
+  you intend to migrate an existing SAP NetWeaver BW installation to HANA, you
+  should extract sizing information using the sizing report attached to&nbsp;</span><span
+  lang=EN-US><a href="https://launchpad.support.sap.com/#/notes/2296290"><span
+  style='font-size:10.0pt;font-family:"Arial",sans-serif'>SAP note 2296290</span></a></span><span
+  lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>. If you
+  plan for additional legacy data to be stored in HANA, obtain the structures
+  of the tables and their record counts from the source database.</span></p>
+  <ul type=disc>
+   <li class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+       "Arial",sans-serif'>Enter the values for Column Store tables and Row
+       Store tables as reported by the sizing script.</span></li>
+   <li class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:
+       "Arial",sans-serif'>Enter the compression factor, i.e. the ratio of the
+       sizes of uncompressed data tables (without their indexes) on the source
+       database and the memory requirements of these tables in HANA. We
+       strongly recommend using the default value if you do not have reliable
+       information justifying a different compression factor.</span></li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt;font-family:"新細明體",serif'>
+
+<hr size=0 width="100%" noshade style='color:black' align=center>
+
+</span></div>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="96%"
+ style='width:96.16%'>
+ <tr style='height:64.0pt'>
+  <td width="28%" valign=top style='width:28.54%;background:#CBDCE6;padding:
+  4.0pt 4.0pt 4.0pt 4.0pt;height:64.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+  "Arial",sans-serif'>SAP BW/4HANA<a name="SAP_NetWeaver_BW_powered_by_HANA_9"><span
+  style='color:black'>&nbsp;</span></a><span style='color:black'>- Definition
+  of Advanced DataStore Objects on HANA</span></span></b><i><span lang=EN-US
+  style='font-size:10.0pt;font-family:"Arial",sans-serif;color:black'><br>
+  ADSO&nbsp;</span></i></p>
+  </td>
+  <td width="70%" valign=top style='width:70.74%;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+  height:64.0pt'>
+  <table class=MsoNormalTable border=0 cellpadding=0 width="81%"
+   style='width:81.56%'>
+   <tr style='height:64.0pt'>
+    <td width="99%" valign=top style='width:99.12%;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+    height:64.0pt'>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Definition sizing element ADSO&nbsp;<br>
+    </span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>An
+    Advanced DataStore Object serves to store consolidated and debugged
+    transaction data at a document level (atomic level). It describes a
+    consolidated dataset from one or more InfoSources.&nbsp; An Advanced
+    DataStore contains a key (for example, document number/item) as well as data
+    fields that can also contain character fields (for example, order status,
+    customer) as key figures. Write-optimized DataStore objects serve as
+    storage for an inbound data layer. While these objects provide much faster
+    data load, they do not offer delta information.&nbsp;</span></p>
+    <p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:
+    "Arial",sans-serif'>Specifics for Advanced DataStore Objects</span></b></p>
+    <ul type=disc>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>NumFld (Numeric fields)&nbsp;<br>
+         </span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Enter
+         the number of numeric fields in the ADSO</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>TxtFlds (Text fields)&nbsp;</span></b><span
+         lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Enter the number of text fields in the ADSO</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>CharLg (Character length)&nbsp;</span></b><span
+         lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Enter the average length of character fields in uncompressed bytes</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>WO (write optimized)&nbsp;</span></b><span
+         lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Flag, if Advanced DataStore Object is write-optimized.</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>Compression factor<span
+         style='color:red'>&nbsp;</span></span></b><span lang=EN-US
+         style='font-size:10.0pt;font-family:"Arial",sans-serif;color:red'><br>
+         </span><span lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'>Enter
+         the compression factor, i.e. the ratio of the sizes of uncompressed
+         data tables (without their indexes) on the source database and the
+         memory requirements of these tables in HANA. We strongly recommend
+         using the default value if you do not have reliable information
+         justifying a different compression factor.</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>Initial load&nbsp;</span></b><span
+         lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Enter the number of records initially loaded into the cube</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>Period. Upld (Periodic upload)&nbsp;</span></b><span
+         lang=EN-US style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Enter the number of records loaded during the periodic upload process</span></li>
+     <li class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;
+         font-family:"Arial",sans-serif'>Period</span></b><span lang=EN-US
+         style='font-size:10.0pt;font-family:"Arial",sans-serif'><br>
+         Enter the total number of uploads which will be kept in the InfoCube</span></li>
+    </ul>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><a name="p_scenario1"><span lang=EN-US style='font-size:
+13.5pt;font-family:"PingFang TC Regular";color:black;display:none'>&nbsp;</span></a></p>
+
+<p class=MsoNormal><a name=ODS3></a><a name=search1></a><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

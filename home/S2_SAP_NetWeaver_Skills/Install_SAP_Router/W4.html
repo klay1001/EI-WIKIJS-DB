@@ -1,0 +1,311 @@
+<!--
+title: W4-長華 SAP Router 安裝及管理說明
+description: 
+published: true
+date: 2023-01-04T06:33:05.322Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T06:31:25.361Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:Wingdings; 
+	panose-1:5 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Cambria; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:"Heiti TC Light";} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Cambria",serif;} 
+	p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph 
+	{margin-top:0cm; 
+	margin-right:0cm; 
+	margin-bottom:0cm; 
+	margin-left:24.0pt; 
+	font-size:12.0pt; 
+	font-family:"Cambria",serif;} 
+	.MsoChpDefault 
+	{font-family:"Cambria",serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.0pt 842.0pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:21.15pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	/* List Definitions */ 
+	ol 
+	{margin-bottom:0cm;} 
+	ul 
+	{margin-bottom:0cm;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:21.15pt'> 
+	
+	<p class=MsoNormal align=center style='text-align:center'><span 
+	style='font-family:"新細明體",serif'>長華</span><span lang=EN-US> SAP Router (Linux) </span><span 
+	style='font-family:"新細明體",serif'>安裝及管理說明</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Linux Server IP: </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>172.31.42.139</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SAP Router</span><span style='font-family: 
+	"新細明體",serif'>安裝路徑：</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/usr/usr/sap/saprouter </span><span 
+	style='font-family:"新細明體",serif'>目錄</span> <span lang=EN-US><br> 
+	</span><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span lang=EN-US> 
+	saprouter </span><span style='font-family:"新細明體",serif'>主程式</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> niping </span><span style='font-family:"新細明體",serif'>網路工具</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> saprouttab </span><span style='font-family:"新細明體",serif'>存取權限設定檔</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> dev_rout </span><span style='font-family:"新細明體",serif'>程式</span><span 
+	lang=EN-US> trace file</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> saprouttab.log </span><span style='font-family:"新細明體",serif'>存取記錄</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Linux OS User :</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>saprouter </span><span style='font-family: 
+	"新細明體",serif'>帳號，專門用來執行</span><span lang=EN-US> saprouter.</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SAP Router </span><span style='font-family: 
+	"新細明體",serif'>自動啟動之</span><span lang=EN-US> RC scripts:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/rc.d/saprouter</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/rc5.d/S90saprouter </span><span 
+	lang=EN-US style='font-family:Wingdings'>&agrave;</span><span lang=EN-US> ../saprouter</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/rc5.d/K90saprouter </span><span 
+	lang=EN-US style='font-family:Wingdings'>&agrave;</span><span lang=EN-US> ../saprouter</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Cambria",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>該台</span><span 
+	lang=EN-US> IP 172.31.42.139</span><span style='font-family:"新細明體",serif'>，僅能用</span><span 
+	lang=EN-US> VNC (port 5901)</span><span style='font-family:"新細明體",serif'>連線。以下為以</span> 
+	<span lang=EN-US><br> 
+	VNC Viewer </span><span style='font-family:"新細明體",serif'>連線。</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=422 height=298 id="圖片 1" 
+	src="/s2/w4/image001.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.48.53.png"></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>然後如下圖打入密碼</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=420 height=331 id="圖片 2" 
+	src="/s2/w4/image002.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午6.11.04.png"></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>進入桌面後，右點，</span><span 
+	lang=EN-US>menu </span><span style='font-family:"新細明體",serif'>裡選</span><span 
+	lang=EN-US> Open Terminal</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=435 height=343 id="圖片 4" 
+	src="/s2/w4/image003.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.05.46.png"></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>起動</span><span 
+	lang=EN-US> SAP Router&nbsp; </span><span style='font-family:"新細明體",serif'>指令</span><span 
+	lang=EN-US> : </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/rc.d/saprouter start</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=495 height=390 id="圖片 6" 
+	src="/s2/w4/image004.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.10.38.png"></span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>執行後等一下，然後用</span><span 
+	lang=EN-US>&nbsp; ps –ef | grep saprouter </span><span style='font-family:"新細明體",serif'>去檢查是否有</span><span 
+	lang=EN-US>&nbsp; /usr/sap/saprouter/saprouter </span><span style='font-family: 
+	"新細明體",serif'>這個</span><span lang=EN-US> process </span><span style='font-family: 
+	"新細明體",serif'>在跑。</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>如下圖即為有跑起來</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=467 height=369 id="圖片 7" 
+	src="/s2/w4/image005.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.12.07.png"></span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>停止</span><span 
+	lang=EN-US> SAP Router </span><span style='font-family:"新細明體",serif'>指令：</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/rc.d/saprouter stop</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=448 height=353 id="圖片 8" 
+	src="/s2/w4/image006.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.12.35.png"></span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>等一會後，用</span><span 
+	lang=EN-US> ps –ef | grep saprouter </span><span style='font-family:"新細明體",serif'>檢查，應該沒有</span><span 
+	lang=EN-US> saprouter process </span><span style='font-family:"新細明體",serif'>了。</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>以下為先停</span><span 
+	lang=EN-US> SAP Router</span><span style='font-family:"新細明體",serif'>，再開</span><span 
+	lang=EN-US> SAP Router </span><span style='font-family:"新細明體",serif'>的連續動作。</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=436 id="圖片 9" 
+	src="/s2/w4/image007.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.12.59.png"></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SUSE Linux Firewall:</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Firewall Service </span><span style='font-family: 
+	"新細明體",serif'>是開啟的</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Inbound </span><span style='font-family:"新細明體",serif'>允許</span><span 
+	lang=EN-US> : </span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>所有來源</span><span 
+	lang=EN-US> IP </span><span style='font-family:"新細明體",serif'>到本機的</span> <span 
+	lang=EN-US>SAP Router (Port 3299)</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>所有來源</span><span 
+	lang=EN-US> IP </span><span style='font-family:"新細明體",serif'>到本機的</span><span 
+	lang=EN-US>VNC (Port 5901)</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>所有來源</span><span 
+	lang=EN-US> IP </span><span style='font-family:"新細明體",serif'>到本機的</span><span 
+	lang=EN-US> SSH (Port 22)</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Outbound </span><span style='font-family:"新細明體",serif'>允許：</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>所有目的</span><span 
+	lang=EN-US> IP </span><span style='font-family:"新細明體",serif'>所有</span><span 
+	lang=EN-US> Port (</span><span style='font-family:"新細明體",serif'>沒有擋</span><span 
+	lang=EN-US>)</span><span style='font-family:"新細明體",serif'>。</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=451 height=329 id="圖片 11" 
+	src="/s2/w4/image008.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.24.14.png"><img width=457 
+	height=335 id="圖片 10" src="/s2/w4/image009.png" 
+
+	alt="SSD120:Users:wilson:Desktop:螢幕快照 2017-07-13 下午5.24.05.png"></span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

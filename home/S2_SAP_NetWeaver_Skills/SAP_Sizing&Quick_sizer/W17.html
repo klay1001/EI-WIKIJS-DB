@@ -1,0 +1,409 @@
+<!--
+title: W17-萬蕙昇 ERP HW Sizing for HANA
+description: 
+published: true
+date: 2023-01-05T01:34:41.281Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T07:35:56.350Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:Wingdings; 
+	panose-1:5 0 0 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:Cambria; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:"Heiti TC Light";} 
+	@font-face 
+	{font-family:Times; 
+	panose-1:2 2 6 3 5 4 5 2 3 4;} 
+	@font-face 
+	{font-family:標楷體; 
+	panose-1:3 0 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"\@標楷體";} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Cambria",serif;} 
+	p.MsoTitle, li.MsoTitle, div.MsoTitle 
+	{mso-style-link:"標題 字元"; 
+	margin-top:12.0pt; 
+	margin-right:0cm; 
+	margin-bottom:3.0pt; 
+	margin-left:0cm; 
+	text-align:center; 
+	font-size:16.0pt; 
+	font-family:"Calibri",sans-serif; 
+	font-weight:bold;} 
+	a:link, span.MsoHyperlink 
+	{color:blue; 
+	text-decoration:underline;} 
+	p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph 
+	{margin-top:0cm; 
+	margin-right:0cm; 
+	margin-bottom:0cm; 
+	margin-left:24.0pt; 
+	font-size:12.0pt; 
+	font-family:"Cambria",serif;} 
+	span.a 
+	{mso-style-name:"標題 字元"; 
+	mso-style-link:標題; 
+	font-family:"Calibri",sans-serif; 
+	font-weight:bold;} 
+	.MsoChpDefault 
+	{font-family:"Cambria",serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.0pt 842.0pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:21.15pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	/* List Definitions */ 
+	ol 
+	{margin-bottom:0cm;} 
+	ul 
+	{margin-bottom:0cm;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW link=blue vlink=purple style='word-wrap:break-word;text-justify-trim: 
+	punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:21.15pt'> 
+	
+	<p class=MsoTitle><span style='font-family:"新細明體",serif'>萬蕙昇</span><span 
+	lang=EN-US> SAP ERP hardware sizing for HANA</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+	V1</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoTitle align=left style='text-align:left'><span style='font-family: 
+	"新細明體",serif'>需求項目及數值</span><span lang=EN-US>:</span></p> 
+	
+	<p class=MsoNormal style='background:white'><span lang=EN-US style='font-size: 
+	11.0pt;font-family:"Arial",sans-serif;color:#222222'>&nbsp;&nbsp;</span><b><span 
+	lang=EN-US style='font-size:11.0pt;font-family:標楷體;color:#222222'>Sizing</span></b><b><span 
+	lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif;color:#222222'>&nbsp;</span></b><b><span 
+	lang=EN-US style='font-size:11.0pt;font-family:標楷體;color:#222222'>Input</span></b><b><span 
+	style='font-size:11.0pt;font-family:標楷體;color:#222222'>資料如下<span lang=EN-US>(from 
+	Samuel</span></span></b><b><span lang=EN-US style='font-size:11.0pt;font-family: 
+	"Arial",sans-serif;color:#222222'>’</span></b><b><span lang=EN-US 
+	style='font-size:11.0pt;font-family:標楷體;color:#222222'>s email)</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=429 
+	src="/s2/w17/image001.png"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Cambria",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoTitle align=left style='text-align:left'><span style='font-family: 
+	"新細明體",serif'>轉化成的</span><span lang=EN-US>SAP Sizing </span><span 
+	style='font-family:"新細明體",serif'>工具輸入值</span> <span lang=EN-US>:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>使用者</span><span 
+	lang=EN-US> 70 </span><span style='font-family:"新細明體",serif'>人模組分佈</span><span 
+	lang=EN-US>(</span><span style='font-family:"新細明體",serif'>假設</span><span 
+	lang=EN-US>):</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CO 
+	: &nbsp;5</span><span style='font-family:"新細明體",serif'>位</span><span 
+	lang=EN-US> (L/M/H=0/0/5)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FI 
+	: &nbsp;5 </span><span style='font-family:"新細明體",serif'>位</span><span 
+	lang=EN-US>&nbsp; (0/0/5)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; MM: &nbsp;20 </span><span 
+	style='font-family:"新細明體",serif'>位</span><span lang=EN-US> (0/0/20)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; SD: &nbsp;15 </span><span 
+	style='font-family:"新細明體",serif'>位</span><span lang=EN-US> (0/0/10)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; PP:&nbsp; 20 </span><span 
+	style='font-family:"新細明體",serif'>位</span><span lang=EN-US> (0/0/20)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; PS:&nbsp; 5 </span><span 
+	style='font-family:"新細明體",serif'>位</span><span lang=EN-US> (0/0/10)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Cambria",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoTitle align=left style='text-align:left'><span style='font-family: 
+	"新細明體",serif'>使用</span><span lang=EN-US> SAP Quick Sizer for HANA:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=180 height=128 id="圖片 1" 
+	src="/s2/w17/image002.png"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>輸入畫面</span><span 
+	lang=EN-US>: SAP ERP </span><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> Financials</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=264 id="圖片 6" 
+	src="/s2/w17/image003.png"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>輸入畫面</span><span 
+	lang=EN-US>: SAP ERP </span><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> Product Dev. &amp; Execution</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=330 id="圖片 8" 
+	src="/s2/w17/image004.png"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>輸入畫面</span><span 
+	lang=EN-US>: SAP ERP </span><span lang=EN-US style='font-family:Wingdings'>&agrave;</span><span 
+	lang=EN-US> Sales &amp; Service</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=298 id="圖片 9" 
+	src="/s2/w17/image005.png"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>結果畫面：</span><span 
+	lang=EN-US>SAP Sizing Tools output screen</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=416 id="圖片 2" 
+	src="/s2/w17/image006.png"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Cambria",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt;font-family: 
+	"Calibri",sans-serif'>&nbsp;</span></b></p> 
+	
+	<p class=MsoTitle align=left style='text-align:left'><span style='font-family: 
+	"新細明體",serif'>結論</span><span lang=EN-US> (For Production System only)</span><span 
+	style='font-family:"新細明體",serif'>：</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>HANA Server SAPS </span><span 
+	style='font-family:"新細明體",serif'>值</span> </p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Total SAPS(DB+APP) </span><span 
+	style='font-family:"新細明體",serif'>為</span> <span lang=EN-US>12000, </span><span 
+	style='font-family:"新細明體",serif'>建議用</span><span lang=EN-US> 16000&nbsp; (</span><span 
+	style='font-family:"新細明體",serif'>因</span><span lang=EN-US> sizing tool </span><span 
+	style='font-family:"新細明體",serif'>不考慮客製，以</span><span lang=EN-US>1.5x </span><span 
+	style='font-family:"新細明體",serif'>解決</span><span lang=EN-US>)</span><span 
+	style='font-family:"新細明體",serif'>。</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>HANA Server Memory:</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>HANA Database server 338GB</span><span 
+	style='font-family:"新細明體",serif'>。因要裝上</span><span lang=EN-US> Application 
+	Server </span><span style='font-family:"新細明體",serif'>，會再使用</span><span 
+	lang=EN-US> 16GB</span><span style='font-family:"新細明體",serif'>左右，故將取</span><span 
+	lang=EN-US> 512GB level </span><span style='font-family:"新細明體",serif'>的</span><span 
+	lang=EN-US> HANA System</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>HANA Server Disk:</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>DATA (/hana/data) </span><span style='font-family: 
+	"新細明體",serif'>空間</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>以</span><span lang=EN-US> 
+	HANA DB Memory 4 </span><span style='font-family:"新細明體",serif'>倍來計，</span><span 
+	lang=EN-US> 338GB x 4 = 1352GB</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>LOG (/hana/log) </span><span style='font-family: 
+	"新細明體",serif'>空間</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span style='font-family:"新細明體",serif'>以</span> <span lang=EN-US>HANA 
+	DB Memory 1 </span><span style='font-family:"新細明體",serif'>倍來計，</span><span 
+	lang=EN-US>338GB x 1 = 338GB</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>OS (/) </span><span style='font-family:"新細明體",serif'>空間至少</span><span 
+	lang=EN-US> 100GB</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Hardware </span><span style='font-family: 
+	"新細明體",serif'>採購注意事項</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Production SAP HANA Server</span><span 
+	style='font-family:"新細明體",serif'>之機型需符合以下二項條件之一</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>Certified HANA Appliance<br> 
+	<a 
+	href="http://global.sap.com/community/ebook/2014-09-02-hana-hardware/enEN/appliances.html"><span 
+
+	style='font-size:8.0pt'>http://global.sap.com/community/ebook/2014-09-02-hana-hardware/enEN/appliances.html</span></a></span><span 
+	lang=EN-US style='font-size:8.0pt'> </span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>SAP TDI (Tailored Data Center Integration) 
+	Program </span><span style='font-family:"新細明體",serif'>所明列的</span><span 
+	lang=EN-US> Entry-Level HANA E5 Systems</span><span style='font-family:"新細明體",serif'>之一</span><span 
+	lang=EN-US><br> 
+	<a 
+	href="http://global.sap.com/community/ebook/2014-09-02-hana-hardware/enEN/entry-level-systems.html"><span 
+
+	style='font-size:8.0pt'>http://global.sap.com/community/ebook/2014-09-02-hana-hardware/enEN/entry-level-systems.html</span></a></span><span 
+	lang=EN-US style='font-size:8.0pt'><br> 
+	</span><span style='font-family:"新細明體",serif'>並需通過</span><span lang=EN-US> SAP 
+	Hardware Configuration Check Tool (HWCCT) </span><span style='font-family:"新細明體",serif'>之檢驗</span><span 
+	lang=EN-US> (SAP note 1943937)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Cambria",serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SAP System Landscape</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Production Server x 1 (SAP PRD APP + HANA DB)</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>OS: SuSE Linux Enterprise 11+</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>SAP: EHP7 for ERP6.0</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>DB: SAP HANA 1.0 SPS09</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Test &amp; Development Server x 1 (SAP DEV APP + 
+	QAS APP + HANA DB)</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>OS: SuSE Linux Enterprise 11+</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>SAP: EHP7 for ERP6.0</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>DB: SAP HANA 1.0 SPS09</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>Solution Manager Server x 1</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>OS: Windows 2012R2</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>SAP: Solution Manager 7.1</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:48.0pt;text-indent:-24.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>n<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; 
+	</span></span><span lang=EN-US>DB: Sybase ASE 16</span></p> 
+	
+	<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span 
+	lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp; 
+	</span></span><span lang=EN-US>External Backup mechanism (NAS, Storage, or 
+	Backup Software)</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

@@ -1,0 +1,446 @@
+<!--
+title: 4_Unicode_Convertion
+description: 
+published: true
+date: 2023-01-04T03:44:36.079Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T03:44:33.920Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:細明體; 
+	panose-1:2 2 5 9 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:"Book Antiqua"; 
+	panose-1:2 4 6 2 5 3 5 3 3 4;} 
+	@font-face 
+	{font-family:"\@細明體"; 
+	panose-1:2 1 6 9 0 1 1 1 1 1;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Calibri",sans-serif;} 
+	p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2 
+	{mso-style-link:"本文 2 字元"; 
+	margin:0cm; 
+	line-height:18.0pt; 
+	text-autospace:none; 
+	font-size:10.0pt; 
+	font-family:"Book Antiqua",serif;} 
+	span.2 
+	{mso-style-name:"本文 2 字元"; 
+	mso-style-link:"本文 2"; 
+	font-family:"Book Antiqua",serif;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.3pt 841.9pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>0.1Archive log 
+	off</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=121 
+	src="/s2/j10_4/image001.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>0.2 Change 
+	Kernel </span></b><b><span style='font-size:16.0pt;font-family:"新細明體",serif'>權限</span></b></p> 
+	
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>chown oraprd:sapsys brarchive brbackup 
+	brconnect</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>chmod 4774 brarchive brbackup brconnect</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>chmod 775 brrecover brrestore brspace 
+	brtools</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'><img 
+	width=479 height=126 src="/s2/j10_4/image002.gif"></span></p> 
+
+	
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>&nbsp;</span></p> 
+	
+	<p class=MsoBodyText2><span lang=EN-US style='font-family:"Arial",sans-serif'>chmod 
+	775 /oracle/PRD/sapbackup</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>0.3 Oracle</span></b><b><span 
+	style='font-size:16.0pt;font-family:"新細明體",serif'>先做</span></b><b><span 
+	lang=EN-US style='font-size:16.0pt'>update statistics</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>SAP </span><span style='font-family:"新細明體",serif'>要開著</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span style='font-size:16.0pt;font-family:"新細明體",serif'>開始</span></b><b><span 
+	style='font-size:16.0pt'> <span lang=EN-US>Unicode Conver</span></span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:se38</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>執行</span><span 
+	lang=EN-US>:sdbi_cluster_check</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=215 
+	src="/s2/j10_4/image003.jpg"><img width=554 height=195 
+
+	src="/s2/j10_4/image004.jpg"><img width=554 height=207 
+
+	id="圖片 7" src="/s2/j10_4/image005.jpg"><img width=475 
+
+	height=287 id="圖片 13" src="/s2/j10_4/image006.jpg"><img 
+
+	width=554 height=241 id="圖片 16" 
+	src="/s2/j10_4/image007.jpg"><img width=554 height=383 
+
+	id="圖片 19" src="/s2/j10_4/image008.jpg"><img width=554 
+
+	height=289 id="圖片 22" src="/s2/j10_4/image009.jpg"><img 
+
+	width=342 height=38 id="圖片 25" 
+	src="/s2/j10_4/image010.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:se38</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>執行</span><span 
+	lang=EN-US>radntlang<img width=554 height=201 id="圖片 28" 
+	src="/s2/j10_4/image011.jpg"><img width=554 height=178 
+
+	id="圖片 31" src="/s2/j10_4/image012.jpg"><img width=554 
+
+	height=249 id="圖片 34" src="/s2/j10_4/image013.jpg"><img 
+
+	width=554 height=289 id="圖片 37" 
+	src="/s2/j10_4/image014.jpg"><img width=554 height=296 
+
+	id="圖片 40" src="/s2/j10_4/image015.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:/$NAM</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=123 height=30 id="圖片 43" 
+	src="/s2/j10_4/image016.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:spumg</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=444 id="圖片 46" 
+	src="/s2/j10_4/image017.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=434 id="圖片 49" 
+	src="/s2/j10_4/image018.jpg"><img width=554 height=410 
+
+	id="圖片 52" src="/s2/j10_4/image019.jpg"><img width=554 
+
+	height=562 id="圖片 55" src="/s2/j10_4/image020.jpg"><img 
+
+	width=554 height=302 id="圖片 58" 
+	src="/s2/j10_4/image021.jpg"><img width=192 height=24 
+
+	id="圖片 61" src="/s2/j10_4/image022.jpg"><img width=554 
+
+	height=368 id="圖片 64" src="/s2/j10_4/image023.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=366 id="圖片 67" 
+	src="/s2/j10_4/image024.jpg"><img width=554 height=170 
+
+	id="圖片 70" src="/s2/j10_4/image025.jpg"><img width=554 
+
+	height=438 id="圖片 73" src="/s2/j10_4/image026.jpg"></span><span 
+
+	style='font-family:"新細明體",serif'>這步要等它做完後，再繼續下去</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=426 id="圖片 76" 
+	src="/s2/j10_4/image027.jpg"></span><span 
+
+	style='font-family:"新細明體",serif'>上一步</span><span lang=EN-US><img width=554 
+	height=425 id="圖片 79" src="/s2/j10_4/image028.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=157 id="圖片 82" 
+	src="/s2/j10_4/image029.jpg"><img width=554 height=187 
+
+	id="圖片 85" src="/s2/j10_4/image030.jpg"><img width=554 
+
+	height=308 id="圖片 94" src="/s2/j10_4/image031.jpg"><img 
+
+	width=554 height=153 id="圖片 97" 
+	src="/s2/j10_4/image032.jpg"><img width=554 height=426 
+
+	id="圖片 100" src="/s2/j10_4/image033.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:se16</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-family:"Arial",sans-serif'>DB 
+	Level</span><span style='font-family:"新細明體",serif'>確認這幾個</span><span 
+	lang=EN-US style='font-family:"Arial",sans-serif'> Table </span><span 
+	style='font-family:"新細明體",serif'>是空的</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>DDXTT</span></b></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>DDXTF</span></b></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>DDXTF_CONV_UC</span></b></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-family:"Arial",sans-serif'>DDXTT_CONV_UC</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=226 id="圖片 103" 
+	src="/s2/j10_4/image034.jpg"></span><span lang=EN-US>&nbsp;<img 
+
+	width=554 height=220 id="圖片 106" 
+	src="/s2/j10_4/image035.jpg">&nbsp;<img width=554 
+
+	height=216 id="圖片 109" src="/s2/j10_4/image036.jpg">&nbsp;<img 
+
+	width=554 height=216 id="圖片 112" 
+	src="/s2/j10_4/image037.jpg"></span><span 
+
+	style='font-family:"新細明體",serif'>確認這四個</span><span lang=EN-US>Table</span><span 
+	style='font-family:"新細明體",serif'>都為空後，執行</span><span lang=EN-US>Create nametabs</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=152 id="圖片 115" 
+	src="/s2/j10_4/image038.jpg"></span><span lang=EN-US>&nbsp;<img 
+
+	width=554 height=398 id="圖片 118" 
+	src="/s2/j10_4/image039.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=225 id="圖片 124" 
+	src="/s2/j10_4/image040.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;<img width=554 height=250 id="圖片 121" 
+	src="/s2/j10_4/image041.jpg">&nbsp;<img width=554 
+
+	height=157 id="圖片 127" src="/s2/j10_4/image042.jpg">&nbsp;</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=412 
+	src="/s2/j10_4/image043.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=409 
+	src="/s2/j10_4/image044.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>上傳這兩個</span><span 
+	lang=EN-US>VOC</span><span style='font-family:"新細明體",serif'>檔案</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=136 height=29 id="圖片 133" 
+	src="/s2/j10_4/image045.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>再</span> <span 
+	style='font-family:"新細明體",serif'>上傳</span><span lang=EN-US> James </span><span 
+	style='font-family:"新細明體",serif'>提供的</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>一個一個給</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=410 
+	src="/s2/j10_4/image046.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=412 id="圖片 1" 
+	src="/s2/j10_4/image047.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Upload </span><span style='font-family: 
+	"新細明體",serif'>前</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=370 
+	src="/s2/j10_4/image048.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=372 id="圖片 4" 
+	src="/s2/j10_4/image049.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>一個一個</span> <span 
+	lang=EN-US>upload</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=510 height=114 id="圖片 5" 
+	src="/s2/j10_4/image050.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Upload </span><span style='font-family: 
+	"新細明體",serif'>後</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=370 id="圖片 6" 
+	src="/s2/j10_4/image051.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=167 id="圖片 136" 
+	src="/s2/j10_4/image052.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=117 height=27 id="圖片 139" 
+	src="/s2/j10_4/image053.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=218 id="圖片 142" 
+	src="/s2/j10_4/image054.jpg"></span><span lang=EN-US>&nbsp;<img 
+
+	width=554 height=264 id="圖片 145" 
+	src="/s2/j10_4/image055.jpg">&nbsp;<img width=91 
+
+	height=22 id="圖片 148" src="/s2/j10_4/image056.jpg">&nbsp;</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=297 id="圖片 3" 
+	src="/s2/j10_4/image057.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=460 id="圖片 2" 
+	src="/s2/j10_4/image058.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;<img width=554 height=511 id="圖片 154" 
+	src="/s2/j10_4/image059.jpg">&nbsp;<img width=554 
+
+	height=316 id="圖片 157" src="/s2/j10_4/image060.jpg">&nbsp;<img 
+
+	width=78 height=22 id="圖片 160" 
+	src="/s2/j10_4/image061.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=510 id="圖片 163" 
+	src="/s2/j10_4/image062.jpg"></span><span lang=EN-US>&nbsp;<img 
+
+	width=554 height=325 id="圖片 166" 
+	src="/s2/j10_4/image063.jpg">&nbsp;<img width=554 
+
+	height=510 id="圖片 172" src="/s2/j10_4/image064.jpg">&nbsp;<img 
+
+	width=554 height=324 id="圖片 175" 
+	src="/s2/j10_4/image065.jpg">&nbsp;<img width=554 
+
+	height=508 id="圖片 178" src="/s2/j10_4/image066.jpg">&nbsp;<img 
+
+	width=554 height=330 id="圖片 181" 
+	src="/s2/j10_4/image067.jpg">&nbsp;<img width=554 
+
+	height=254 id="圖片 184" src="/s2/j10_4/image068.jpg">&nbsp;<img 
+
+	width=554 height=322 id="圖片 187" 
+	src="/s2/j10_4/image069.jpg">&nbsp;<img width=554 
+
+	height=218 id="圖片 190" src="/s2/j10_4/image070.jpg">&nbsp;<img 
+
+	width=554 height=320 id="圖片 193" 
+	src="/s2/j10_4/image071.jpg">&nbsp;<img width=554 
+
+	height=203 id="圖片 196" src="/s2/j10_4/image072.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

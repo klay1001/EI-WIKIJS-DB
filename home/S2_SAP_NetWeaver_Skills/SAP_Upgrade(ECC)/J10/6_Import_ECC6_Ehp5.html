@@ -1,0 +1,1064 @@
+<!--
+title: 6_Import_ECC6_Ehp5
+description: 
+published: true
+date: 2023-01-04T04:00:19.968Z
+tags: 
+editor: code
+dateCreated: 2023-01-04T04:00:17.618Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:Tahoma; 
+	panose-1:2 11 6 4 3 5 4 4 2 4;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Calibri",sans-serif;} 
+	span.urtxtstd 
+	{mso-style-name:urtxtstd;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.3pt 841.9pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>準備安裝環境</span><span 
+	lang=EN-US>:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=450 height=251 
+	src="/s2/j10_6/image001.jpg"><img width=554 
+
+	height=163 src="/s2/j10_6/image002.jpg"><img 
+
+	width=554 height=440 id="圖片 16" 
+	src="/s2/j10_6/image003.jpg"><img width=554 
+
+	height=320 id="圖片 19" src="/s2/j10_6/image004.jpg"><img 
+
+	width=554 height=448 id="圖片 22" 
+	src="/s2/j10_6/image005.jpg"><img width=554 
+
+	height=445 id="圖片 25" src="/s2/j10_6/image006.jpg"><img 
+
+	width=554 height=452 id="圖片 28" 
+	src="/s2/j10_6/image007.jpg"><img width=554 
+
+	height=446 id="圖片 31" src="/s2/j10_6/image008.jpg"><img 
+
+	width=554 height=444 id="圖片 34" 
+	src="/s2/j10_6/image009.jpg"><img width=554 
+
+	height=448 id="圖片 37" src="/s2/j10_6/image010.jpg"><img 
+
+	width=554 height=449 id="圖片 40" 
+	src="/s2/j10_6/image011.jpg"><img width=554 
+
+	height=445 id="圖片 43" src="/s2/j10_6/image012.jpg"><img 
+
+	width=554 height=446 id="圖片 46" 
+	src="/s2/j10_6/image013.jpg"><img width=554 
+
+	height=452 id="圖片 49" src="/s2/j10_6/image014.jpg"><img 
+
+	width=554 height=447 id="圖片 52" 
+	src="/s2/j10_6/image015.jpg"><img width=554 
+
+	height=443 id="圖片 55" src="/s2/j10_6/image016.jpg"><img 
+
+	width=554 height=448 id="圖片 58" 
+	src="/s2/j10_6/image017.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/fstab</span><span style='font-family: 
+	"新細明體",serif'>系統會自動加</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=111 id="圖片 61" 
+	src="/s2/j10_6/image018.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><a name="OLE_LINK3"></a><a name="OLE_LINK4"><span 
+	style='font-family:"新細明體",serif'>增加</span><span lang=EN-US>SWAP</span></a><span 
+	style='font-family:"新細明體",serif'>空間</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='font-size:13.5pt;font-family:"Tahoma",sans-serif; 
+	color:black'>Suse linux swap<br> 
+	</span><span style='font-size:13.5pt;font-family:"新細明體",serif;color:black'>假設要加</span><span 
+	lang=EN-US style='font-size:13.5pt;font-family:"Tahoma",sans-serif;color:black'> 
+	swap 8192MB </span><span style='font-size:13.5pt;font-family:"新細明體",serif; 
+	color:black'>在</span><span lang=EN-US style='font-size:13.5pt;font-family:"Tahoma",sans-serif; 
+	color:black'> /var/lib/swap </span><span style='font-size:13.5pt;font-family: 
+	"新細明體",serif;color:black'>目錄裡</span><span lang=EN-US style='font-size:13.5pt; 
+	font-family:"Tahoma",sans-serif;color:black'><br> 
+	<br> 
+	1. Create empty swap file<br> 
+	<br> 
+	mkdir -p /var/lib/swap<br> 
+	dd if=/dev/zero of=/var/lib/swap/swapfile bs=1M count=16384<br> 
+	(Oracle 11.0.2.4 </span><span style='font-size:13.5pt;font-family:"新細明體",serif; 
+	color:black'>需求</span><span lang=EN-US style='font-size:13.5pt;font-family: 
+	"Tahoma",sans-serif;color:black'>16GB)<br> 
+	2. Initialize this swap file<br> 
+	<br> 
+	mkswap /var/lib/swap/swapfile<br> 
+	<br> 
+	3. Active swap<br> 
+	<br> 
+	swapon /var/lib/swap/swapfile<br> 
+	</span><span lang=EN-US style='font-size:13.5pt;font-family:"Tahoma",sans-serif; 
+	color:black'>4. </span><span style='font-size:13.5pt;font-family:"新細明體",serif; 
+	color:black'>寫在</span><span lang=EN-US style='font-size:13.5pt;font-family: 
+	"Tahoma",sans-serif;color:black'> fstab </span><span style='font-size:13.5pt; 
+	font-family:"新細明體",serif;color:black'>檔使重啟後仍生效</span><span lang=EN-US 
+	style='font-size:13.5pt;font-family:"Tahoma",sans-serif;color:black'><br> 
+	<br> 
+	</span><span style='font-size:13.5pt;font-family:"新細明體",serif;color:black'>在</span><span 
+	lang=EN-US style='font-size:13.5pt;font-family:"Tahoma",sans-serif;color:black'> 
+	/etc/fstab </span><span style='font-size:13.5pt;font-family:"新細明體",serif; 
+	color:black'>加一行</span><span lang=EN-US style='font-size:13.5pt;font-family: 
+	"Tahoma",sans-serif;color:black'><br> 
+	/var/lib/swap/swapfile swap swap defaults 0 0</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>準備</span><span 
+	lang=EN-US>source:</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>1.Kernel:&nbsp; </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>2.Export:&nbsp;&nbsp; </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>3.Export xml:&nbsp; </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>/etc/hosts </span><span style='font-family: 
+	"新細明體",serif'>要注意</span> <span style='font-family:"新細明體",serif'>！！！</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=385 
+	src="/s2/j10_6/image019.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=550 height=544 id="圖片 175" 
+	src="/s2/j10_6/image020.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原因為</span><span 
+	lang=EN-US>/sapsrc</span><span style='font-family:"新細明體",serif'>目錄權限</span><span 
+	lang=EN-US>766</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>正常要給</span><span 
+	lang=EN-US>755</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=530 
+	src="/s2/j10_6/image021.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>要改回原來的版本</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=119 
+	src="/s2/j10_6/image022.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=497 height=26 
+	src="/s2/j10_6/image023.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Copy </span><span style='font-family:"新細明體",serif'>這目錄下全部的</span><span 
+	lang=EN-US>xml</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>準備好</span><span 
+	lang=EN-US>/sapsrc</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=543 height=273 
+	src="/s2/j10_6/image024.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=540 height=390 
+	src="/s2/j10_6/image025.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=115 id="圖片 64" 
+	src="/s2/j10_6/image026.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=557 id="圖片 295" 
+	src="/s2/j10_6/image027.jpg"><img width=554 
+
+	height=554 id="圖片 298" src="/s2/j10_6/image028.jpg"><img 
+
+	width=554 height=554 id="圖片 301" 
+	src="/s2/j10_6/image029.jpg"><img width=554 
+
+	height=557 id="圖片 304" src="/s2/j10_6/image030.jpg"><img 
+
+	width=554 height=557 id="圖片 307" 
+	src="/s2/j10_6/image031.jpg"></span><span lang=EN-US>P2ssw0rd</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=376 
+	src="/s2/j10_6/image032.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=769 
+	src="/s2/j10_6/image033.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=530 
+	src="/s2/j10_6/image034.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=554 id="圖片 313" 
+	src="/s2/j10_6/image035.jpg"><img width=554 
+
+	height=558 id="圖片 316" src="/s2/j10_6/image036.jpg"><img 
+
+	width=554 height=554 id="圖片 319" 
+	src="/s2/j10_6/image037.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=531 
+	src="/s2/j10_6/image038.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=554 id="圖片 325" 
+	src="/s2/j10_6/image039.jpg"><img width=554 
+
+	height=553 id="圖片 328" src="/s2/j10_6/image040.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=530 
+	src="/s2/j10_6/image041.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=555 id="圖片 331" 
+	src="/s2/j10_6/image042.jpg"><img width=554 
+
+	height=558 id="圖片 334" src="/s2/j10_6/image043.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=528 
+	src="/s2/j10_6/image044.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=550 id="圖片 337" 
+	src="/s2/j10_6/image045.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span class=urtxtstd><span lang=EN-US>Migration key:</span></span><span 
+	lang=EN-US> <span class=urtxtstd>1WefdEM50D401eqtf1Ux3QAw</span></span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;color:blue'>這部份可以試著給</span><span 
+	style='color:blue'> <span lang=EN-US>6 </span></span><span style='font-family: 
+	"新細明體",serif;color:blue'>個</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US style='color:blue'><img width=554 
+	height=531 src="/s2/j10_6/image046.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US style='color:blue'>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=555 id="圖片 343" 
+	src="/s2/j10_6/image047.jpg"><img width=554 
+
+	height=553 id="圖片 346" src="/s2/j10_6/image048.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=528 
+	src="/s2/j10_6/image049.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=554 id="圖片 352" 
+	src="/s2/j10_6/image050.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>apmmpa<img width=554 height=557 id="圖片 355" 
+	src="/s2/j10_6/image051.jpg"><img width=554 
+
+	height=558 id="圖片 358" src="/s2/j10_6/image052.jpg"><img 
+
+	width=554 height=558 id="圖片 361" 
+	src="/s2/j10_6/image053.jpg"><img width=554 
+
+	height=554 id="圖片 364" src="/s2/j10_6/image054.jpg"><img 
+
+	width=554 height=553 id="圖片 367" 
+	src="/s2/j10_6/image055.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=551 height=546 id="圖片 178" 
+	src="/s2/j10_6/image056.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>開始安裝</span><span 
+	lang=EN-US>Oracle 11</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=309 
+	src="/s2/j10_6/image057.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=447 height=216 id="圖片 181" 
+	src="/s2/j10_6/image058.jpg"><img width=538 
+
+	height=406 id="圖片 184" src="/s2/j10_6/image059.jpg"><img 
+
+	width=547 height=406 id="圖片 187" 
+	src="/s2/j10_6/image060.jpg"><img width=540 
+
+	height=404 id="圖片 190" src="/s2/j10_6/image061.jpg"><img 
+
+	width=542 height=406 id="圖片 193" 
+	src="/s2/j10_6/image062.jpg"><img width=546 
+
+	height=406 id="圖片 196" src="/s2/j10_6/image063.jpg"><img 
+
+	width=543 height=403 id="圖片 199" 
+	src="/s2/j10_6/image064.jpg"><img width=542 
+
+	height=404 id="圖片 202" src="/s2/j10_6/image065.jpg"><img 
+
+	width=536 height=403 id="圖片 205" 
+	src="/s2/j10_6/image066.jpg"><img width=539 
+
+	height=404 id="圖片 208" src="/s2/j10_6/image067.jpg"><img 
+
+	width=539 height=406 id="圖片 211" 
+	src="/s2/j10_6/image068.jpg"><img width=546 
+
+	height=406 id="圖片 214" src="/s2/j10_6/image069.jpg"><img 
+
+	width=540 height=404 id="圖片 217" 
+	src="/s2/j10_6/image070.jpg"><img width=540 
+
+	height=404 id="圖片 220" src="/s2/j10_6/image071.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=470 height=292 id="圖片 223" 
+	src="/s2/j10_6/image072.jpg"><img width=542 
+
+	height=406 id="圖片 229" src="/s2/j10_6/image073.jpg"><img 
+
+	width=539 height=402 id="圖片 226" 
+	src="/s2/j10_6/image074.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>下次做要給</span><span 
+	lang=EN-US>14GB<img width=538 height=406 id="圖片 232" 
+	src="/s2/j10_6/image075.jpg"><img width=539 
+
+	height=399 id="圖片 235" src="/s2/j10_6/image076.jpg"><img 
+
+	width=539 height=404 id="圖片 238" 
+	src="/s2/j10_6/image077.jpg"><img width=538 
+
+	height=403 id="圖片 241" src="/s2/j10_6/image078.jpg"><img 
+
+	width=542 height=482 id="圖片 244" 
+	src="/s2/j10_6/image079.jpg"><img width=448 
+
+	height=364 id="圖片 247" src="/s2/j10_6/image080.jpg"><img 
+
+	width=540 height=404 id="圖片 250" 
+	src="/s2/j10_6/image081.jpg"> </span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>調整</span><span 
+	lang=EN-US> oracle 11 </span><span style='font-family:"新細明體",serif'>參數</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=558 id="圖片 370" 
+	src="/s2/j10_6/image082.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>10:20~01:10</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=550 height=548 id="圖片 379" 
+	src="/s2/j10_6/image083.jpg"><img width=548 
+
+	height=546 id="圖片 382" src="/s2/j10_6/image084.jpg"></span><span 
+
+	lang=EN-US>startsap</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=448 height=314 id="圖片 385" 
+	src="/s2/j10_6/image085.jpg"><img width=546 
+
+	height=546 id="圖片 388" src="/s2/j10_6/image086.jpg"></span><span 
+
+	lang=EN-US>retry</span><span style='font-family:"新細明體",serif'>後會完成</span><span 
+	lang=EN-US><img width=548 height=547 id="圖片 391" 
+	src="/s2/j10_6/image087.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span style='font-size:16.0pt;font-family:"新細明體",serif'>設定</span></b><b><span 
+	lang=EN-US style='font-size:16.0pt'> NFS </span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>0 copy trans directory from Old DEV to New 
+	DEV </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>使用</span><span 
+	lang=EN-US> devadm </span><span style='font-family:"新細明體",serif'>登入</span><span 
+	lang=EN-US> NEW DEV</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=204 height=290 
+	src="/s2/j10_6/image088.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=287 height=324 
+	src="/s2/j10_6/image089.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=374 height=275 
+	src="/s2/j10_6/image090.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>進入</span><span 
+	lang=EN-US> trans </span><span style='font-family:"新細明體",serif'>全選</span> <span 
+	style='font-family:"新細明體",serif'>並複製到</span><span lang=EN-US> DEV 
+	/usr/sap/trans</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=357 
+	src="/s2/j10_6/image091.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>1 DEV NFS Server Share </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=385 
+	src="/s2/j10_6/image092.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>2 /etc/hosts add&nbsp; PRD IP &amp; 
+	Hostname</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=350 height=283 
+	src="/s2/j10_6/image093.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>3 PRD NFS Client add </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=386 
+	src="/s2/j10_6/image094.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>4 /etc/hosts add DEV IP &amp; Hostname <span 
+	style='color:#3366FF'>(need restart)</span></span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=385 height=316 
+	src="/s2/j10_6/image095.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>重新啟動</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Client 000/ddic/apmmpa</span><span 
+	style='font-family:"新細明體",serif'>登入</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:se06</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=246 id="圖片 394" 
+	src="/s2/j10_6/image096.jpg"><img width=554 
+
+	height=236 id="圖片 397" src="/s2/j10_6/image097.jpg"><img 
+
+	width=554 height=217 id="圖片 400" 
+	src="/s2/j10_6/image098.jpg"><img width=554 
+
+	height=306 id="圖片 403" src="/s2/j10_6/image099.jpg"><img 
+
+	width=554 height=234 id="圖片 406" 
+	src="/s2/j10_6/image100.jpg"><img width=554 
+
+	height=235 id="圖片 409" src="/s2/j10_6/image101.jpg"><img 
+
+	width=554 height=227 id="圖片 412" 
+	src="/s2/j10_6/image102.jpg"><img width=554 
+
+	height=222 id="圖片 415" src="/s2/j10_6/image103.jpg"><img 
+
+	width=554 height=228 id="圖片 418" 
+	src="/s2/j10_6/image104.jpg"></span><span lang=EN-US>Tx:stms</span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=393 
+	src="/s2/j10_6/image105.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=494 id="圖片 3" 
+	src="/s2/j10_6/image106.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>logon DEV</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=218 id="圖片 4" 
+	src="/s2/j10_6/image107.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=226 id="圖片 5" 
+	src="/s2/j10_6/image108.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Back PRD</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=458 id="圖片 6" 
+	src="/s2/j10_6/image109.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Go to DEV</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=263 id="圖片 10" 
+	src="/s2/j10_6/image110.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=466 id="圖片 9" 
+	src="/s2/j10_6/image111.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=494 id="圖片 8" 
+	src="/s2/j10_6/image112.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=535 id="圖片 7" 
+	src="/s2/j10_6/image113.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=522 id="圖片 11" 
+	src="/s2/j10_6/image114.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=534 id="圖片 12" 
+	src="/s2/j10_6/image115.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=288 id="圖片 13" 
+	src="/s2/j10_6/image116.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:RZ10<img width=554 height=237 id="圖片 427" 
+	src="/s2/j10_6/image117.jpg"><img width=554 
+
+	height=502 id="圖片 430" src="/s2/j10_6/image118.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:slicense</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=250 id="圖片 433" 
+	src="/s2/j10_6/image119.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Tx:stzac</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>Change IP</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>1 PRD stopsap &amp; oracle</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>2 Change IP</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>3 Check /etc/hosts </span><span 
+	style='font-family:"新細明體",serif'>有</span><span lang=EN-US> DEV Hostname &amp; 
+	IP</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=382 id="圖片 1" 
+	src="/s2/j10_6/image120.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>4 restart</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>DEV </span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>1 /etc/hosts change PRD IP</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=386 id="圖片 2" 
+	src="/s2/j10_6/image121.gif"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>2 restart</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>APM_Ora11g_ALTER_EVENT_SQL:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET EVENT 
+	='38087','10183','10027','10028','10191','10995 level 2','10142','31991','38068 
+	level 100','38085','44951 level 1024'SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>APM_Ora11g_ALTER_FIX_CONTROL_SQL:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_FIX_CONTROL&quot;='7168184:OFF','8937971:ON','13627489:ON','14255600:ON','14595273:ON','5099019:ON','5705630:ON','6055658:OFF','6120483:OFF','6399597:ON','6430500:ON','6440977:ON','6626018:ON','6972291:ON','9196440:ON','9495669:ON'SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>APM_Ora11g_ALTER_SET_Para:</span></b></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>&nbsp;</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_ktb_debug_flags&quot;=8 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;optimizer_index_cost_adj&quot;=20 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_mutex_wait_scheme&quot;=1 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_mutex_wait_time&quot;=10 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_optimizer_adaptive_cursor_sharing&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_optimizer_extended_cursor_sharing_rel&quot;=NONE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_optimizer_use_feedback&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_securefiles_concurrency_estimate&quot;=50 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_awr_mmon_deep_purge_all_expired&quot;=TRUE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>APM_Ora11g_Tunning:</span></b></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET EVENT 
+	='38087','10183','10027','10028','10191','10995 level 2','10142','31991','38068 
+	level 100','38085','44951 level 1024'SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_FIX_CONTROL&quot;='7168184:OFF','8937971:ON','13627489:ON','14255600:ON','14595273:ON','5099019:ON','5705630:ON','6055658:OFF','6120483:OFF','6399597:ON','6430500:ON','6440977:ON','6626018:ON','6972291:ON','9196440:ON','9495669:ON'SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_ktb_debug_flags&quot;=8 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;optimizer_index_cost_adj&quot;=20 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_mutex_wait_scheme&quot;=1 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_mutex_wait_time&quot;=10 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET &quot;_optimizer_adaptive_cursor_sharing&quot;=FALSE 
+	SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_optimizer_extended_cursor_sharing_rel&quot;=NONE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_optimizer_use_feedback&quot;=FALSE SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_securefiles_concurrency_estimate&quot;=50 SCOPE=SPFILE;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>ALTER SYSTEM SET 
+	&quot;_awr_mmon_deep_purge_all_expired&quot;=TRUE SCOPE=SPFILE;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+

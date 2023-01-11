@@ -1,0 +1,587 @@
+<!--
+title: Cluster_Testing
+description: 
+published: true
+date: 2023-01-05T02:04:27.998Z
+tags: 
+editor: code
+dateCreated: 2023-01-05T02:04:25.774Z
+-->
+
+	<html> 
+	
+	<head> 
+	<meta http-equiv=Content-Type content="text/html; charset=big5"> 
+	<meta name=Generator content="Microsoft Word 15 (filtered)"> 
+	<style> 
+	<!-- 
+	/* Font Definitions */ 
+	@font-face 
+	{font-family:新細明體; 
+	panose-1:2 2 5 0 0 0 0 0 0 0;} 
+	@font-face 
+	{font-family:"Cambria Math"; 
+	panose-1:2 4 5 3 5 4 6 3 2 4;} 
+	@font-face 
+	{font-family:Calibri; 
+	panose-1:2 15 5 2 2 2 4 3 2 4;} 
+	@font-face 
+	{font-family:"\@新細明體"; 
+	panose-1:2 1 6 1 0 1 1 1 1 1;} 
+	/* Style Definitions */ 
+	p.MsoNormal, li.MsoNormal, div.MsoNormal 
+	{margin:0cm; 
+	font-size:12.0pt; 
+	font-family:"Calibri",sans-serif;} 
+	.MsoChpDefault 
+	{font-family:"Calibri",sans-serif;} 
+	/* Page Definitions */ 
+	@page WordSection1 
+	{size:595.0pt 842.0pt; 
+	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+	layout-grid:18.0pt;} 
+	div.WordSection1 
+	{page:WordSection1;} 
+	/* List Definitions */ 
+	ol 
+	{margin-bottom:0cm;} 
+	ul 
+	{margin-bottom:0cm;} 
+	--> 
+	</style> 
+	
+	</head> 
+	
+	<body lang=ZH-TW style='word-wrap:break-word;text-justify-trim:punctuation'> 
+	
+	<div class=WordSection1 style='layout-grid:18.0pt'> 
+	
+	<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 
+	style='border-collapse:collapse;border:none'> 
+	<tr> 
+	<td width=553 colspan=2 valign=top style='width:414.5pt;border:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><b><span 
+	style='font-size:15.0pt;font-family:"新細明體",serif'>測試情境</span></b></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>查詢</span><span 
+	lang=EN-US> Enqueue </span><span style='font-family:"新細明體",serif'>是否會</span><span 
+	lang=EN-US> Keep</span><span style='font-family:"新細明體",serif'>住</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span lang=EN-US>Set a Node Standby</span><span 
+	style='font-family:"新細明體",serif'>（約花費：</span><span lang=EN-US>10s</span><span 
+	style='font-family:"新細明體",serif'>）</span></p> 
+	<p class=MsoNormal><span lang=EN-US>Set a Node Online</span><span 
+	style='font-family:"新細明體",serif'>（約花費：</span><span lang=EN-US>25s</span><span 
+	style='font-family:"新細明體",serif'>）</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將第一台</span><span 
+	lang=EN-US> power-off</span><span style='font-family:"新細明體",serif'>（約花費：</span><span 
+	lang=EN-US>68s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>4</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將第二台</span><span 
+	lang=EN-US> power-off</span><span style='font-family:"新細明體",serif'>（約花費：</span><span 
+	lang=EN-US>73s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>拔掉第二台網卡（約花費：</span><span 
+	lang=EN-US>42s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>6</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將</span><span 
+	lang=EN-US>corosync</span><span style='font-family:"新細明體",serif'>的程序砍掉（約花費：</span><span 
+	lang=EN-US>88s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	</td> 
+	</tr> 
+	<tr> 
+	<td width=141 valign=top style='width:106.1pt;border:solid windowtext 1.0pt; 
+	border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>7</span></p> 
+	</td> 
+	<td width=411 valign=top style='width:308.4pt;border-top:none;border-left: 
+	none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; 
+	padding:0cm 5.4pt 0cm 5.4pt'> 
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>更改參數檔</span></p> 
+	</td> 
+	</tr> 
+	</table> 
+	
+	<p class=MsoNormal><b><span lang=EN-US style='font-size:20.0pt'>&nbsp;</span></b></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>測試參考網頁：</span><span 
+	lang=EN-US>http://www.scalingbits.com/aws/sap/ha/slesforsap/testprocessnetweaver</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>1</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：查詢</span><span lang=EN-US style='background:yellow'> 
+	Enqueue </span><span style='font-family:"新細明體",serif;background:yellow'>是否會</span><span 
+	lang=EN-US style='background:yellow'> Keep</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>住</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 5" 
+	src="/s2/技研/testing/image001.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>先用</span><span 
+	lang=EN-US>SM12</span><span style='font-family:"新細明體",serif'>查看</span><span 
+	lang=EN-US> Enqueue</span><span style='font-family:"新細明體",serif'>的表</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 4" 
+	src="/s2/技研/testing/image002.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>關閉第一台</span><span 
+	lang=EN-US><img width=554 height=346 id="圖片 6" 
+	src="/s2/技研/testing/image003.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Sick</span><span style='font-family:"新細明體",serif'>會</span><span 
+	lang=EN-US>Talk Central Service </span><span style='font-family:"新細明體",serif'>中間會失敗</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 7" 
+	src="/s2/技研/testing/image004.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>Lock Table</span><span style='font-family: 
+	"新細明體",serif'>有成功</span><span lang=EN-US>Keep</span><span style='font-family: 
+	"新細明體",serif'>住</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 8" 
+	src="/s2/技研/testing/image005.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>切換成功後</span> <span 
+	lang=EN-US>sick </span><span style='font-family:"新細明體",serif'>恢復正常</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>2</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：</span><span lang=EN-US style='background:yellow'>Set a 
+	Node Standby</span><span style='font-family:"新細明體",serif;background:yellow'>（約花費：</span><span 
+	lang=EN-US style='background:yellow'>10s</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=67 id="圖片 1" 
+	src="/s2/技研/testing/image006.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 2" 
+	src="/s2/技研/testing/image007.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原本第一台狀況</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 10" 
+	src="/s2/技研/testing/image008.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>在第二台下指定：</span><span 
+	lang=EN-US>crm node standby</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 11" 
+	src="/s2/技研/testing/image009.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 12" 
+	src="/s2/技研/testing/image010.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>切換結果</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 13" 
+	src="/s2/技研/testing/image011.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>之後回去第二台下</span><span 
+	lang=EN-US> crm node online </span><span style='font-family:"新細明體",serif'>恢復（約花費：</span><span 
+	lang=EN-US>25s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 14" 
+	src="/s2/技研/testing/image012.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 15" 
+	src="/s2/技研/testing/image013.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>3</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：將第一台</span><span lang=EN-US style='background:yellow'> 
+	power-off</span><span style='font-family:"新細明體",serif;background:yellow'>（約花費：</span><span 
+	lang=EN-US style='background:yellow'>68s</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=53 id="圖片 16" 
+	src="/s2/技研/testing/image014.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 17" 
+	src="/s2/技研/testing/image015.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 18" 
+	src="/s2/技研/testing/image016.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原始狀況</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 19" 
+	src="/s2/技研/testing/image017.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將第一台關閉</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 20" 
+	src="/s2/技研/testing/image018.jpg"><img width=462 height=289 id="圖片 21" 
+
+	src="/s2/技研/testing/image019.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>重開第二台：</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=452 height=282 id="圖片 22" 
+	src="/s2/技研/testing/image020.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=452 height=282 id="圖片 23" 
+	src="/s2/技研/testing/image021.jpg"></span><span lang=EN-US>&nbsp;</span><span 
+
+	style='font-family:"新細明體",serif'>完成</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>4</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：將第二台</span><span lang=EN-US style='background:yellow'> 
+	power-off</span><span style='font-family:"新細明體",serif;background:yellow'>（約花費：</span><span 
+	lang=EN-US style='background:yellow'>73s</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=53 id="圖片 41" 
+	src="/s2/技研/testing/image022.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 42" 
+	src="/s2/技研/testing/image023.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 43" 
+	src="/s2/技研/testing/image024.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原始狀況</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 44" 
+	src="/s2/技研/testing/image025.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>將第二台關閉</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 45" 
+	src="/s2/技研/testing/image026.jpg"></span></p> 
+
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=462 height=289 id="圖片 46" 
+	src="/s2/技研/testing/image027.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>重開第二台</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=452 height=282 id="圖片 47" 
+	src="/s2/技研/testing/image028.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=453 height=283 id="圖片 48" 
+	src="/s2/技研/testing/image029.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>5</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：拔掉第二台網卡（約花費：</span><span lang=EN-US style='background:yellow'>42s</span><span 
+	style='font-family:"新細明體",serif;background:yellow'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=70 id="圖片 49" 
+	src="/s2/技研/testing/image030.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 50" 
+	src="/s2/技研/testing/image031.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 51" 
+	src="/s2/技研/testing/image032.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原始狀態</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 52" 
+	src="/s2/技研/testing/image033.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>右鍵</span><span 
+	lang=EN-US>Edit Setting &gt; </span><span style='font-family:"新細明體",serif'>選擇最下面</span><span 
+	lang=EN-US>Network Adapter &gt; <br> 
+	</span><span style='font-family:"新細明體",serif'>將右上角</span><span lang=EN-US> 
+	Device Status – Connect </span><span style='font-family:"新細明體",serif'>不要打勾</span><span 
+	lang=EN-US> &gt; </span><span style='font-family:"新細明體",serif'>選擇</span><span 
+	lang=EN-US>OK </span><span style='font-family:"新細明體",serif'>關閉第二台</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 53" 
+	src="/s2/技研/testing/image034.jpg"><img width=554 height=346 id="圖片 54" 
+
+	src="/s2/技研/testing/image035.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>（拔掉網卡後，有重開機或</span><span 
+	lang=EN-US>log-off</span><span style='font-family:"新細明體",serif'>的動作，不確定是</span><span 
+	lang=EN-US>HA or VM</span><span style='font-family:"新細明體",serif'>的動作）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>要恢復需將</span><span 
+	lang=EN-US>connect</span><span style='font-family:"新細明體",serif'>勾選，並且重開機</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 55" 
+	src="/s2/技研/testing/image036.jpg"><img width=554 height=346 id="圖片 56" 
+
+	src="/s2/技研/testing/image037.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>恢復完成</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>切換並不會導致</span><span 
+	lang=EN-US> GUI </span><span style='font-family:"新細明體",serif'>斷線</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>6</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：將</span><span lang=EN-US style='background:yellow'>corosync</span><span 
+	style='font-family:"新細明體",serif;background:yellow'>的程序砍掉（約花費：</span><span 
+	lang=EN-US style='background:yellow'>88s</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=79 id="圖片 57" 
+	src="/s2/技研/testing/image038.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 58" 
+	src="/s2/技研/testing/image039.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 59" 
+	src="/s2/技研/testing/image040.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原始狀況</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 60" 
+	src="/s2/技研/testing/image041.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>下指令將相關程序刪除</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 61" 
+	src="/s2/技研/testing/image042.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 62" 
+	src="/s2/技研/testing/image043.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>結果兩台互換</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif;background:yellow'>情境</span><span 
+	lang=EN-US style='background:yellow'>7</span><span style='font-family:"新細明體",serif; 
+	background:yellow'>：更改參數檔</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 9" 
+	src="/s2/技研/testing/image044.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=553 height=306 id="圖片 3" 
+	src="/s2/技研/testing/image045.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>成功更改</span> <span 
+	lang=EN-US>AOTOMATIC_RECOVER </span><span style='font-family:"新細明體",serif'>成功從</span><span 
+	lang=EN-US>false &gt; true </span><span style='font-family:"新細明體",serif'>（左圖至右圖）</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>情境</span><span 
+	lang=EN-US>8</span><span style='font-family:"新細明體",serif'>：</span><span 
+	lang=EN-US>Failure of ASCS instance</span><span style='font-family:"新細明體",serif'>（花費約</span><span 
+	lang=EN-US>58s</span><span style='font-family:"新細明體",serif'>）</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=57 id="圖片 24" 
+	src="/s2/技研/testing/image046.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 25" 
+	src="/s2/技研/testing/image047.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 26" 
+	src="/s2/技研/testing/image048.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>原始狀況</span></p> 
+	
+	<span lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif'><br 
+	clear=all style='page-break-before:always'> 
+	</span> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 27" 
+	src="/s2/技研/testing/image049.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span style='font-family:"新細明體",serif'>下指令</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 28" 
+	src="/s2/技研/testing/image050.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US><img width=554 height=346 id="圖片 29" 
+	src="/s2/技研/testing/image051.jpg"></span></p> 
+
+	
+	<p class=MsoNormal><span lang=EN-US>ASCS / ERS</span><span style='font-family: 
+	"新細明體",serif'>互換</span></p> 
+	
+	<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p> 
+	
+	</div> 
+	
+	</body> 
+	
+	</html> 
+	
+
